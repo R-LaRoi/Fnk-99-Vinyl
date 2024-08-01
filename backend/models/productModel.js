@@ -10,3 +10,7 @@ const ProductsSchema = {
   is_available: {},
   price: {},
 };
+
+const productModel = mongoose.model("products", ProductsSchema);
+
+module.exports = productModel;

@@ -1,15 +1,22 @@
 const mongoose = require("mongoose");
 
-const ProductsSchema = {
-  type: {},
-  title: {},
-  desc: {},
-  name: {},
-  qty: {},
-  img_url: {},
-  is_available: {},
-  price: {},
-};
+const ProductsSchema = new mongoose.Schema(
+  {
+    type: {},
+    title: {},
+    desc: {},
+    name: {},
+    qty: {},
+    img_url: {},
+    is_available: {},
+    price: {},
+  },
+  {
+    timestamps: true,
+    toObject: { virtuals: true },
+    toJSON: { virtuals: true },
+  }
+);
 
 const productModel = mongoose.model("products", ProductsSchema);
 

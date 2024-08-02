@@ -10,7 +10,7 @@ export function Nav({menu}: NavProps){
 
 return(
 
-<nav >
+<nav>
 
   <ul className="nav--">
       <div>logo</div>{menu.map((item, index) => (

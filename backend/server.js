@@ -8,9 +8,16 @@ const productModel = require("./models/productModel");
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.get("/", async (req, res) => {
+app.get("/api/", async (req, res) => {
   const allVinyl = await productModel.find();
-  res.render("index", { allVinyl });
+  console.log(allVinyl);
+  res.status(200).json({
+    results: allVinyl.length,
+    status: "success",
+    data: {
+      allVinyl,
+    },
+  });
 });
 
 app.listen(PORT, () => {

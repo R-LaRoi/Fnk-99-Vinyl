@@ -1,5 +1,5 @@
 import { Nav } from "./Nav"
-// import { Products } from "./Products"
+
 
 const navMenu = ["shop", "events", "cart", ]
 

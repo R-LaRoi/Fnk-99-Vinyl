@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import  axios, { Axios }  from 'axios'
+import  axios, { Axios, all }  from 'axios'
 
 import { Layout } from './Components/Layout'
 
@@ -8,15 +8,19 @@ import './App.css'
 function App() {
   const [products, setProducts] = useState([]);
 
+  console.log(products);
+
 useEffect(()=>{
 async function fetchData(){
   try {
     const response = await axios({
-      url: "/",
+      url: "/api/",
       method: "GET"
     })
 
-   console.log(response)
+   const {data} = response.data;
+   const {allVinyl} = data;
+   setProducts(allVinyl);
 
   } catch (error:any) {
     console.log(error.stack)

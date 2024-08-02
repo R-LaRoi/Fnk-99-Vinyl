@@ -1,0 +1,6 @@
+FE -> http://localhost:5173/
+  Proxy proxies your request to http://localhost:3000/api/
+
+  localhost:3000/api/ -> BE server
+
+  BE -> response

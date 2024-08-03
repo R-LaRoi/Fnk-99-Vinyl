@@ -1,25 +1,28 @@
+import { CartBtn } from "./Cart";
+
+
 interface ProductsData{
 title:string;
-description: string;
-
+desc: string;
+_id: string;
 }
-
 
 interface ProductsProps{
   products: ProductsData
+
 }
 
 
 export function Products({products}:ProductsProps){
 
-  const{title, description } = products
+const {title, desc, _id } = products;
 return(
 
 <section>
 <div>vinyl</div>
 <div>{title}</div>
-<div>{description}</div>
-<button>add to cart</button>
+<div>{desc}</div>
+<CartBtn id={_id}/>
 </section>
 
 )

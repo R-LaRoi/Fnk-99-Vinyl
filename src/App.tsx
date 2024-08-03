@@ -1,12 +1,13 @@
 import { useEffect, useState } from 'react'
-import  axios, { Axios, all }  from 'axios'
-
+import  axios from 'axios'
 import { Layout } from './Components/Layout'
 
 import './App.css'
+import { Products } from './Components/Products'
+
 
 function App() {
-  const [products, setProducts] = useState([]);
+  const [products, setProducts] = useState([{}]);
 
   console.log(products);
 
@@ -33,7 +34,18 @@ async function fetchData(){
    fetchData(); },[])
 
   return (
+    <>
 <Layout />
+
+ {products.map((products:any, index: number) => (
+        <Products key={index} products={products} />
+      ))}
+{/* error ---> products={products}<--- 
+Type '{}' is missing the following properties from type 'ProductsData': title, desc", */}
+
+</>
+
+
   )
 }
 

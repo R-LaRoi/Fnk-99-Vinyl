@@ -40,6 +40,10 @@ async function fetchData(){
  {products.map((products:any, index: number) => (
         <Products key={index} products={products} />
       ))}
+      <section>
+
+</section>
+
 {/* error ---> products={products}<--- 
 Type '{}' is missing the following properties from type 'ProductsData': title, desc", */}
 

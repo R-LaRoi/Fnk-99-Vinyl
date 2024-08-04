@@ -4,3 +4,8 @@ FE -> http://localhost:5173/
   localhost:3000/api/ -> BE server
 
   BE -> response
+
+
+  create a cart:
+  start with an empty array.
+  once item is selected push the object into an empty array. 

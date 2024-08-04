@@ -1,5 +1,4 @@
-import { CartBtn } from "./Cart";
-
+import { CartBtn } from "./CartBtn";
 
 interface ProductsData{
 title:string;
@@ -22,8 +21,10 @@ return(
 <div>vinyl</div>
 <div>{title}</div>
 <div>{desc}</div>
-<CartBtn id={_id}/>
+<CartBtn title={title}  id={_id}/>
+
 </section>
+
 
 )
 

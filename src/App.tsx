@@ -7,8 +7,7 @@ import { Products } from './Components/Products'
 
 
 function App() {
-  const [products, setProducts] = useState([{}]);
-
+  const [products, setProducts] = useState([]);
   console.log(products);
 
 useEffect(()=>{
@@ -36,12 +35,10 @@ async function fetchData(){
   return (
     <>
 <Layout />
-
  {products.map((products:any, index: number) => (
-        <Products key={index} products={products} />
+<Products key={index} products={products} />
       ))}
       <section>
-
 </section>
 
 {/* error ---> products={products}<--- 

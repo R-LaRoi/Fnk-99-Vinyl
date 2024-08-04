@@ -9,21 +9,23 @@ title:string;
 const userCart:  CartBtnProps[] = []
 
 export function CartBtn({id, title, }:CartBtnProps){
-const [cartItems, setCartItems] = useState<CartBtnProps[]>([]);
+
+
+  const [cartItems, setCartItems] = useState<CartBtnProps[]>([]);
 
 function addToCart(){
 const cartItem: CartBtnProps = {id, title};
 userCart.push(cartItem)
 setCartItems(userCart)
-console.log(userCart)
+console.log(cartItems)
+
+return cartItems
 
   }
 
   return(
 <>
-
 <button value={id} onClick={addToCart}> add to cart </button>
-
 </>
 
 

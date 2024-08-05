@@ -1,6 +1,9 @@
 import { useEffect, useState } from 'react'
 import { Nav } from "./Components/Nav"
-import { Products } from './Components/Products'
+// import { Products } from './Components/Products'
+import { Routes, Route } from 'react-router-dom'
+import {Cart} from './Components/Cart'
+import Home from './Components/home'
 import  axios from 'axios'
 import './App.css'
 
@@ -33,10 +36,20 @@ async function fetchData(){
 
   return (
     <>
-      <Nav menu={navMenu}/>
-      {products.map((products:any, index: number) => (
+
+      <Nav menu={navMenu} />
+      {/* {products.map((products:any, index: number) => (
       <Products key={index} products={products} />
-            ))}
+            ))} */}
+            <Routes>
+              <Route path="/"
+              element ={<Home products={products}/>}
+              />
+              <Route
+              path="/cart"
+              element={<Cart products={products}/>}
+              />
+            </Routes>
 </>
 
 

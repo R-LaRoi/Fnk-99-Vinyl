@@ -9,7 +9,7 @@ title:string;
 
 const userCart:  AddToCartBtnProps[] = []
 
-export function AddToCartBtn({id, title, }:AddToCartBtnProps){
+function AddToCartBtn({id, title, }:AddToCartBtnProps){
 
   const [cartItems, setCartItems] = useState<AddToCartBtnProps[]>([]);
 
@@ -35,4 +35,4 @@ return cartItems
 
 }
 
-
+export {userCart, AddToCartBtn}

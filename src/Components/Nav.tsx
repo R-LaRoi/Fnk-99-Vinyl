@@ -1,5 +1,6 @@
 import "./styles/nav.css"
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 interface NavProps{
 menu: string[];
@@ -17,13 +18,15 @@ const [showCart, setShowCart] = useState(false)
   }
 return(
 
-<nav>
+<nav style={{border:"1px solid red"}}>
 
   <ul className="nav--">
       <div>logo</div>{menu.map((item, index) => (
       <li key={index}>{item}</li>
         ))}
+        <Link to="/cart">
         <button onClick={handleShowCart}>cart</button>
+        </Link>
         </ul>
   {showCart ? (
         <div>

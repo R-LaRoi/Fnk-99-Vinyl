@@ -1,4 +1,5 @@
-import { CartBtn } from "./CartBtn";
+import { AddToCartBtn } from "./AddToCartBtn";
+
 
 interface ProductsData{
 title:string;
@@ -11,9 +12,7 @@ interface ProductsProps{
 
 }
 
-
-
-
+// shows the products collection from mongodb --- 
 export function Products({products}:ProductsProps){
 
 const {title, desc, _id } = products;
@@ -22,7 +21,9 @@ return(
 <>
 <div>{title}</div>
 <div>{desc}</div>
-<CartBtn title={title}  id={_id}/>
+
+<AddToCartBtn title={title}  id={_id}/>
+
 </>
 
 
@@ -30,3 +31,4 @@ return(
 
 
 }
+

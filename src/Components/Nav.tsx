@@ -3,7 +3,6 @@ import { useState } from "react";
 
 interface NavProps{
 menu: string[];
-cartItems: CartBtnProps[];
 
 }
 
@@ -16,9 +15,6 @@ const [showCart, setShowCart] = useState(false)
     setShowCart(true);
 
   }
-
-
-
 return(
 
 <nav>
@@ -32,6 +28,11 @@ return(
   {showCart ? (
         <div>
           <h2>show items</h2>
+          {/* <ul>
+             {cartItems.map((item) => (
+              <li key={item.id}>{item.title}</li>
+            ))}
+          </ul> */}
           <button onClick={() => setShowCart(false)}>Go Back</button>
         </div>
       ) : (

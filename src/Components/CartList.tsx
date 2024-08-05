@@ -1,7 +1,7 @@
 
 
 interface CartListProps {
-  cartItems: CartBtnProps[];
+  cartItems: AddToCartBtnProps[];
 }
 
 export function CartList ( {cartItems}:CartListProps){
@@ -10,10 +10,9 @@ export function CartList ( {cartItems}:CartListProps){
   return(
 
  <div className='cart-element'>
-{cartItems.map((item:CartBtnProps, index: number) => (
-        <div key={index}>
-          <li>{item.title}</li>
-        </div>
+{cartItems.map((item, index) => (
+          <li key={index}>{item.title}</li>
+      
       ))}
       </div> 
 

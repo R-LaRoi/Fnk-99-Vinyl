@@ -1,10 +1,11 @@
 import { useEffect, useState } from 'react'
-import  axios from 'axios'
-import { Layout } from './Components/Layout'
-
-import './App.css'
+import { Nav } from "./Components/Nav"
 import { Products } from './Components/Products'
+import  axios from 'axios'
+import './App.css'
 
+
+const navMenu = ["shop", "events"]
 
 function App() {
   const [products, setProducts] = useState([]);
@@ -27,23 +28,15 @@ async function fetchData(){
     
   }
 
-
 }
-
    fetchData(); },[])
 
   return (
     <>
-<Layout />
- {products.map((products:any, index: number) => (
-<Products key={index} products={products} />
-      ))}
-      <section>
-</section>
-
-{/* error ---> products={products}<--- 
-Type '{}' is missing the following properties from type 'ProductsData': title, desc", */}
-
+      <Nav menu={navMenu}/>
+      {products.map((products:any, index: number) => (
+      <Products key={index} products={products} />
+            ))}
 </>
 
 

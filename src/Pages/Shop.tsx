@@ -32,7 +32,6 @@ export function Shop({products}:ShopProps) {
 
 
 
-
     </div>
   )
 }

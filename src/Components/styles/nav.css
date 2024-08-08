@@ -7,3 +7,16 @@ body {
   list-style: none;
   gap: 10px;
 }
+
+.modal {
+  width: 370px;
+  height: 400px;
+  top: 50%;
+  left: 50%;
+  /* transform: translate(-50%, -50%); */
+  border-radius: 50px;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px,
+    rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+}

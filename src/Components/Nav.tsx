@@ -1,48 +1,43 @@
-import "./styles/nav.css"
+import "./styles/nav.css";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { Cart } from "./Cart";
 
-interface NavProps{
-menu: string[];
-
+interface NavProps {
+  menu: {
+    url: string;
+    text: string;
+  }[];
 }
 
+export function Nav({ menu }: NavProps) {
+  const [showCart, setShowCart] = useState(false);
 
-export function Nav({menu}: NavProps){
-
-const [showCart, setShowCart] = useState(false)
-
-  function handleShowCart(){
+  function handleShowCart() {
     setShowCart(true);
-
   }
-return(
 
-<nav style={{border:"1px solid red"}}>
-
-  <ul className="nav--">
-      <div>logo</div>{menu.map((item, index) => (
-      <li key={index}>{item}</li>
+  return (
+    <nav style={{ border: "1px solid red" }}>
+      <ul className="nav">
+        <div>logo</div>
+        {menu.map((link, index) => (
+          <li key={index}>
+            <Link to={link.url}>{link.text}</Link>
+          </li>
         ))}
         <Link to="/cart">
-        <button onClick={handleShowCart}>cart</button>
+          <button onClick={handleShowCart}>cart</button>
         </Link>
-        </ul>
-  {showCart ? (
+    
+      </ul>
+
+      {showCart && (
         <div>
-          <h2>show items</h2>
-          {/* <ul>
-             {cartItems.map((item) => (
-              <li key={item.id}>{item.title}</li>
-            ))}
-          </ul> */}
-          <button onClick={() => setShowCart(false)}>Go Back</button>
+          <Cart />
+          <button onClick={() => setShowCart(false)}>close</button>
         </div>
-      ) : (
-       null
       )}
-        </nav>
-)
-
-
+    </nav>
+  );
 }

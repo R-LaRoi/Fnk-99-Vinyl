@@ -1,14 +1,16 @@
-import { useEffect, useState } from 'react'
-import { Nav } from "./Components/Nav"
-// import { Products } from './Components/Products'
-import { Routes, Route } from 'react-router-dom'
-import {Cart} from './Components/Cart'
-import Home from './Components/home'
 import  axios from 'axios'
+import { useEffect, useState } from 'react'
+import { Routes, Route } from 'react-router-dom'
+import { Nav } from "./Components/Nav"
+import {navMenu} from './Components/navLinks'
+import {Cart} from './Components/Cart'
+import { Shop } from './Pages/Shop'
+import {About} from './Pages/About'
+import {Events} from './Pages/Events'
+import {Home} from './Pages/Home'
+
 import './App.css'
 
-
-const navMenu = ["shop", "events"]
 
 function App() {
   const [products, setProducts] = useState([]);
@@ -34,23 +36,20 @@ async function fetchData(){
 }
    fetchData(); },[])
 
+
+
+
   return (
     <>
-
-      <Nav menu={navMenu} />
-      {/* {products.map((products:any, index: number) => (
-      <Products key={index} products={products} />
-            ))} */}
+       <Nav menu={navMenu} />
             <Routes>
-              <Route path="/"
-              element ={<Home products={products}/>}
-              />
-              <Route
-              path="/cart"
-              element={<Cart products={products}/>}
-              />
+            <Route path="/" element ={<Home products={products}/>}/>
+            <Route path="/cart" element={<Cart />}/>
+            <Route path="/shop" element={<Shop products={products}/>} />
+            <Route path="/about" element={<About />} />  
+            <Route path="/events" element={<Events />} />
             </Routes>
-</>
+      </>
 
 
   )

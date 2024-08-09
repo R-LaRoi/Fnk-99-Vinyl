@@ -2,8 +2,7 @@
   "builds": [
     { "src": "backend/server.js", "use": "@vercel/node" }],
 
-"env": {
-    "PORT": { "required": true, "value": "3000" }},
+
 
 "routes": [
     { "src": "/(.*)", "dest": "backend/server.js" }] }

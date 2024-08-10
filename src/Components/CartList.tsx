@@ -1,7 +1,5 @@
-
-
 interface CartListProps {
-  cartItems: AddToCartBtnProps[];
+  cartItems: { title: string }[];
 }
 
 export function CartList ( {cartItems}:CartListProps){

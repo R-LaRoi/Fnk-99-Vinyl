@@ -3,7 +3,7 @@ import { useState } from "react";
 interface AddToCartBtnProps{
 id: string;
 title:string;
-// addToCart: (id: string, title: string) => void;
+
 
 }
 
@@ -26,8 +26,6 @@ return cartItems
   }
 
 
-
-  
   return(
 <>
 

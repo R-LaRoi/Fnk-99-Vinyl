@@ -25,7 +25,7 @@ export function Home({products}:HomeProps){
   console.log(products);
   return(
     <>
-      <Hero video={heroVideo} title="FUNK 99"/>
+      <Hero video={heroVideo} title="FNK 99"/>
       <h1>Featured item</h1>
       {products.length > 0 && (
         <Products key={products[0].id} products={products[0]} />

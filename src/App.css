@@ -1,3 +1,13 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+
+@font-face {
+  font-family: "Visby"; /* Name your font family */
+  src: url(/src/dist/assets/fonts/VisbyBold.ttf); /* Locate the .ttf file within your directory*/
+}
+
+@font-face {
+  font-family: "Tusker-38"; /* Name your font family */
+  src: url(/src/dist/assets/fonts/TuskerGrotesk-3800Super.otf); /* Locate the .ttf file within your directory*/
+}

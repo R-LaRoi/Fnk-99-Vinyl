@@ -4,9 +4,8 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js",
-        "dev": "vite",
-    "build": "vite build"
+    "start": "nodemon server.js"
+
     
   
   },

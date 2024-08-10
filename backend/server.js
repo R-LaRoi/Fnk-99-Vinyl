@@ -2,10 +2,12 @@ const express = require("express");
 const app = express();
 const connectDB = require("./config/db");
 const mongoose = require("mongoose");
+const cors = require("cors");
 const PORT = process.env.PORT;
 const productModel = require("./models/productModel");
 const URL = "https://fnk-99-vinyl-server.onrender.com/api";
 
+app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 

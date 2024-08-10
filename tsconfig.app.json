@@ -23,5 +23,5 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src", "backend/config/server.js", "backend/utils"]
+  "include": ["src", "backend/config/server.js", "backend/utils", "postcss.config.ts"]
 }

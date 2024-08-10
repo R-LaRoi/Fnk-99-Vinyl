@@ -8,6 +8,7 @@ import { Shop } from './Pages/Shop'
 import {About} from './Pages/About'
 import {Events} from './Pages/Events'
 import {Home} from './Pages/Home'
+import {Loading} from './Components/Loading'
 
 import './App.css'
 
@@ -16,6 +17,14 @@ const URL = "https://fnk-99-vinyl-server.onrender.com/api";
 function App() {
   const [products, setProducts] = useState([]);
   console.log(products);
+const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+    setTimeout(() => setLoading(false), 2000)
+  }, [])
+
+
+
 
 useEffect(()=>{
 
@@ -45,14 +54,24 @@ fetchData();
 
   return (
     <>
-       <Nav menu={navMenu} />
-            <Routes>
-            <Route path="/" element ={<Home products={products}/>}/>
-            <Route path="/cart" element={<Cart />}/>
-            <Route path="/shop" element={<Shop products={products}/>} />
-            <Route path="/about" element={<About />} />  
-            <Route path="/events" element={<Events />} />
-            </Routes>
+    { loading === false ?  (
+
+       <>
+<section className='app-main'>
+       <Nav menu={navMenu} /><Routes>
+          <Route path="/" element={<Home products={products} />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/shop" element={<Shop products={products} />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/events" element={<Events />} />
+        </Routes>
+        </section>
+        </>
+        
+        ) : (
+          <Loading title="FUNK 99" />) }
+
+
       </>
 
 

@@ -18,9 +18,9 @@ export function Nav({ menu }: NavProps) {
   }
 
   return (
-    <nav style={{ border: "1px solid red" }}>
-      <ul className="nav">
-        <div>logo</div>
+    <nav style={{ border: "1px solid green" }}>
+      <ul className="nav ">
+        <div className="text-3xl">logo</div>
         {menu.map((link, index) => (
           <li key={index}>
             <Link to={link.url}>{link.text}</Link>

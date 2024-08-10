@@ -11,7 +11,7 @@ import {Home} from './Pages/Home'
 
 import './App.css'
 
-const URL = "https://fnk-99-vinyl-server.onrender.com/api";
+const URL = "https://fnk-99-vinyl-server.onrender.com";
 function App() {
   const [products, setProducts] = useState([]);
   console.log(products);

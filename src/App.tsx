@@ -20,7 +20,7 @@ useEffect(()=>{
 async function fetchData(){
   try {
     const response = await axios({
-      url: "/api/",
+      url: "https://fnk-99-vinyl-server.onrender.com/api",
       method: "GET"
     })
 

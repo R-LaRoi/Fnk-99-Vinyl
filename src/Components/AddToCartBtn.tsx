@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Cart } from "./Cart";
+
 interface AddToCartBtnProps{
 id: string;
 title:string;
@@ -7,7 +7,7 @@ title:string;
 
 }
 
-const userCart:  AddToCartBtnProps[] = []
+const userCart: AddToCartBtnProps[] = []
 
 function AddToCartBtn({id, title, }:AddToCartBtnProps){
   const [cartItems, setCartItems] = useState<AddToCartBtnProps[]>([]);

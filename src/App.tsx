@@ -11,7 +11,7 @@ import {Home} from './Pages/Home'
 
 import './App.css'
 
-
+const URL = "https://fnk-99-vinyl-server.onrender.com/api";
 function App() {
   const [products, setProducts] = useState([]);
   console.log(products);
@@ -20,7 +20,8 @@ useEffect(()=>{
 async function fetchData(){
   try {
     const response = await axios({
-      url: "https://fnk-99-vinyl-server.onrender.com/api",
+      url: URL,
+      // https://fnk-99-vinyl-server.onrender.com/api
       method: "GET"
     })
 

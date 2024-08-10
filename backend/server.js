@@ -4,11 +4,12 @@ const connectDB = require("./config/db");
 const mongoose = require("mongoose");
 const PORT = process.env.PORT;
 const productModel = require("./models/productModel");
+const URL = "https://fnk-99-vinyl-server.onrender.com/api";
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.get("/api/", async (req, res) => {
+app.get(URL, async (req, res) => {
   const allVinyl = await productModel.find();
   console.log(allVinyl);
   res.status(200).json({

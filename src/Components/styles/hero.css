@@ -1,0 +1,22 @@
+@font-face {
+  font-family: "Visby"; /* Name your font family */
+  src: url(/src/dist/assets/fonts/VisbyBold.ttf); /* Locate the .ttf file within your directory*/
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 1;
+}
+
+.title {
+  font-family: "Visby";
+}

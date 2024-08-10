@@ -14,6 +14,8 @@ import './App.css'
 
 const URL = "https://fnk-99-vinyl-server.onrender.com/api";
 
+
+
 function App() {
   const [products, setProducts] = useState([]);
   console.log(products);
@@ -51,20 +53,21 @@ fetchData();
 },[])
 
 
-
   return (
     <>
     { loading === false ?  (
 
        <>
 <section className='app-main'>
-       <Nav menu={navMenu} /><Routes>
+       <Nav menu={navMenu} />
+        <Routes>
           <Route path="/" element={<Home products={products} />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/shop" element={<Shop products={products} />} />
           <Route path="/about" element={<About />} />
           <Route path="/events" element={<Events />} />
         </Routes>
+      
         </section>
         </>
         

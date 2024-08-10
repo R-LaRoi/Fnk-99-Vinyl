@@ -20,7 +20,6 @@ setCartItems(userCart)
 console.log(userCart)
 
 localStorage.setItem('userCart', JSON.stringify(userCart));
-  // console.log(userCart);
 
 return cartItems
 
@@ -31,7 +30,11 @@ return cartItems
   
   return(
 <>
-<button value={id} onClick={addToCart}> add to cart </button>
+
+<button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-2 rounded m-2" value={id} onClick={addToCart}>
+  Add to Cart
+</button>
+
 
 
 </>

@@ -11,32 +11,35 @@ import {Home} from './Pages/Home'
 
 import './App.css'
 
-const URL = "https://fnk-99-vinyl-server.onrender.com";
+const URL = "https://fnk-99-vinyl-server.onrender.com/api";
+
 function App() {
   const [products, setProducts] = useState([]);
   console.log(products);
 
 useEffect(()=>{
-async function fetchData(){
-  try {
-    const response = await axios({
-      url: URL,
-      // https://fnk-99-vinyl-server.onrender.com/api
-      method: "GET"
-    })
 
+async function fetchData() {axios.get(URL)
+  .then(response => {
    const {data} = response.data;
    const {allVinyl} = data;
    setProducts(allVinyl);
+  })
+  .catch(error => {
+    if (error.response) {
+      console.log('Error response:', error.response);
+    } else if (error.request) {
 
-  } catch (error:any) {
-    console.log(error.stack)
-    
-  }
+      console.log('Error request:', error.request);
+    } else {
+      
+      console.log('Error message:', error.message);
+    }
+  });
 
 }
-   fetchData(); },[])
-
+fetchData();
+},[])
 
 
 

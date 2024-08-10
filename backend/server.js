@@ -5,7 +5,9 @@ const mongoose = require("mongoose");
 const PORT = process.env.PORT;
 const productModel = require("./models/productModel");
 // const url = "https://fnk-99-vinyl-server.onrender.com";
+
 const cors = require("cors");
+app.use(cors({ credentials: true, origin: `http://localhost:${PORT}` }));
 
 app.use(cors());
 app.use(express.json());

@@ -9,7 +9,7 @@ title: string
 
 export function Hero({video, title}: HeroProps) {
   return (
-    <section className="container">
+    <>
     <div className='hero-video'>
 <video src={video}
           autoPlay
@@ -24,6 +24,6 @@ export function Hero({video, title}: HeroProps) {
             </div>
     
     </div>
-    </section>
+    </>
     
 )}

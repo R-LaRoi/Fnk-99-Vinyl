@@ -1,3 +1,10 @@
+.hero-video {
+  width: 100%;
+  z-index: 10;
+  object-fit: cover;
+  position: relative;
+}
+
 .overlay {
   font-family: "Tusker-38";
   position: absolute;
@@ -6,17 +13,20 @@
   transform: translate(-50%, -50%);
   text-align: center;
   color: #ffffffec;
-  font-size: 35vw;
+  font-size: 33vw;
   font-weight: bold;
   letter-spacing: 5px;
   white-space: nowrap;
   padding: 2rem;
+  z-index: 20;
+  pointer-events: none;
 }
 
 @media (max-width: 968px) {
   .overlay {
-    font-size: 30vw;
+    margin-top: 10%;
+    font-size: 28vw;
     letter-spacing: 0px;
-    line-height: 10px;
+    line-height: 1;
   }
 }

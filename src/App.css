@@ -13,10 +13,6 @@
 }
 
 @font-face {
-  font-family: "Archivo";
-  src: url("./Fonts/Archivo_ExtraCondensed-Bold.ttf") format("truetype");
+  font-family: "HexFranklin";
+  src: url("./Fonts/HexFranklin.ttf") format("truetype");
 }
-
-/* .product-container {
-  width: 90%;
-} */

@@ -26,7 +26,10 @@ export function Home({products}:HomeProps){
   return(
     <>
       <Hero video={heroVideo} title="FNK 99"/>
-      <h1>Featured item</h1>
+      <div className="text-center mb-10">
+      <h1 className="text-7xl mt-10 text-center text-gray-900 ">THIS JUST IN</h1>
+      <h3 className="text-4xl text-center text-gray-900 ">Check out our latest collection</h3>
+      </div>
       {products.length > 0 && (
         <Products key={products[0].id} products={products[0]} />
       )}

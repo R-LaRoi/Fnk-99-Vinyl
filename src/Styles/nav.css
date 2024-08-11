@@ -1,0 +1,15 @@
+body {
+  margin: 0;
+  font-family: "Archivo";
+  font-size: 23px;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+}
+
+.nav-- {
+  background-color: #e2fd00;
+  width: 100%;
+  z-index: 100;
+  position: fixed;
+  padding: 1.5rem;
+}

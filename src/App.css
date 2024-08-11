@@ -3,11 +3,20 @@
 @import "tailwindcss/utilities";
 
 @font-face {
-  font-family: "Visby"; /* Name your font family */
-  src: url(/src/dist/assets/fonts/VisbyBold.ttf); /* Locate the .ttf file within your directory*/
+  font-family: "Tusker-38";
+  src: url("./Fonts/TuskerGrotesk-4600Semibold.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: "Tusker-38"; /* Name your font family */
-  src: url(/src/dist/assets/fonts/TuskerGrotesk-3800Super.otf); /* Locate the .ttf file within your directory*/
+  font-family: "Visby";
+  src: url("./Fonts/VisbyRegular.ttf") format("truetype");
 }
+
+@font-face {
+  font-family: "Archivo";
+  src: url("./Fonts/Archivo_ExtraCondensed-Bold.ttf") format("truetype");
+}
+
+/* .product-container {
+  width: 90%;
+} */

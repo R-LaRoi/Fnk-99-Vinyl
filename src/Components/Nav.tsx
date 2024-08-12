@@ -19,7 +19,7 @@ export function Nav({ menu }: NavProps) {
 
   return (
     <nav className="nav-- ">
-      <ul className="flex items-center justify-between text-gray-900">
+      <ul className="flex items-center justify-between text-gray-900 tracking-wide">
         <div className="flex space-x-4">
         <div className="text-3xl">logo</div>
         {menu.map((link, index) => (

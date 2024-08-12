@@ -1,5 +1,5 @@
 import { AddToCartBtn } from "./AddToCartBtn";
-
+import "../Styles/products.css";
 
 interface ProductsData{
 title:string;
@@ -18,12 +18,12 @@ export function Products({products}:ProductsProps){
 const {title, desc, _id } = products;
 return(
 
-<div className="product-container">
-<div>{title}</div>
-<div>{desc}</div>
-
+<div className="product-card expanded ">
+  <div className="pd-card">
+<div className="text-3xl">{title}</div>
+<div className="text-sm desc--">{desc}</div>
 <AddToCartBtn title={title}  id={_id}/>
-
+</div>
 </div>
 
 

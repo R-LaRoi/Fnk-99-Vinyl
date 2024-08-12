@@ -1,0 +1,43 @@
+.shop-body {
+  padding-top: 6%;
+}
+
+.products-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.8rem;
+  padding: 5%;
+}
+
+.product-card {
+  background-color: #d9d9d9;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+  height: 100%;
+  width: 100%;
+  min-height: 300px;
+  padding: 16px;
+  flex-grow: 1;
+}
+
+.product-card.expanded {
+  transform: scale(1.05);
+}
+
+.product-ft {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  column-gap: 2rem;
+}
+
+.desc-- {
+  font-family: "Visby";
+  line-height: 1.5;
+}

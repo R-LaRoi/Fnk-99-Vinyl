@@ -1,6 +1,7 @@
 import  axios from 'axios'
 import { useEffect, useState } from 'react'
 import { Routes, Route } from 'react-router-dom'
+import { useAuth0 } from "@auth0/auth0-react";
 import { Nav } from "./Components/Nav"
 import {navMenu} from './Components/navLinks'
 import {Cart} from './Components/Cart'
@@ -9,6 +10,7 @@ import {About} from './Pages/About'
 import {Events} from './Pages/Events'
 import {Home} from './Pages/Home'
 import {Loading} from './Components/Loading'
+import{Checkout} from './Pages/Checkout'
 
 import './App.css'
 
@@ -17,9 +19,10 @@ const URL = "https://fnk-99-vinyl-server.onrender.com/api";
 
 
 function App() {
-  const [products, setProducts] = useState([]);
+const [products, setProducts] = useState([]);
   console.log(products);
 const [loading, setLoading] = useState(true)
+const { isAuthenticated } = useAuth0();
 
   useEffect(() => {
     setTimeout(() => setLoading(false), 2000)
@@ -66,8 +69,17 @@ fetchData();
           <Route path="/shop" element={<Shop products={products} />} />
           <Route path="/about" element={<About />} />
           <Route path="/events" element={<Events />} />
-        </Routes>
       
+{isAuthenticated ? (
+          <Routes>
+             <Route path="/checkout" element={<Checkout />}/>
+          </Routes>
+        ) : (
+          <Route path="/cart" element={<Cart />} />
+        )}
+
+
+          </Routes>
         </section>
         </>
         

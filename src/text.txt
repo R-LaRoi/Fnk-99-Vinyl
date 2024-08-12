@@ -9,3 +9,18 @@ FE -> http://localhost:5173/
   create a cart:
   start with an empty array.
   once item is selected push the object into an empty array. 
+
+
+once the users create a shopping cart --- 
+they navigate to the cart page and  inside of the /cart page 
+-shows the items in the cart 
+- the option to delete the item / or add the qty 
+- a check out button 
+
+- the check out button ask the users to create an account ---- to auth page 
+- once the account is created... 
+the users are able to check out- and are directed to the checkout page which 
+shows a form and cart to checkout 
+renders a form asking for details 
+
+

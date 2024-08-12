@@ -1,7 +1,7 @@
 import "../Styles/nav.css";
-import { useState } from "react";
+// import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Cart } from "./Cart";
+// import { Cart } from "./Cart";
 
 interface NavProps {
   menu: {
@@ -11,11 +11,11 @@ interface NavProps {
 }
 
 export function Nav({ menu }: NavProps) {
-  const [showCart, setShowCart] = useState(false);
+  // const [showCart, setShowCart] = useState(false);
 
-  function handleShowCart() {
-    setShowCart(true);
-  }
+  // function handleShowCart() {
+  //   setShowCart(true);
+  // }
 
   return (
     <nav className="nav-- ">
@@ -29,17 +29,18 @@ export function Nav({ menu }: NavProps) {
         ))}
         </div>
         <Link to="/cart">
-          <button onClick={handleShowCart}>cart</button>
+          {/* <button onClick={handleShowCart}>cart</button> */}
+           <button>cart</button>
         </Link>
     
       </ul>
-
-      {showCart && (
+{/* toggled cart */}
+      {/* {showCart && (
         <div>
           <Cart />
           <button onClick={() => setShowCart(false)}>close</button>
         </div>
-      )}
+      )} */}
     </nav>
   );
 }

@@ -15,8 +15,10 @@ interface ProductsProps{
 
 }
 
+
 // shows the products collection from mongodb --- 
 export function Products({products}:ProductsProps){
+
 
 const {title, desc, _id , img_url, price } = products;
 return(

@@ -64,7 +64,6 @@ fetchData();
 <section className='app-main'>
 <Nav menu={navMenu} />
 
-
         <Routes>
   <Route path="/" element={<Home products={products} />} />
   <Route path="/cart" element={<Cart />} />

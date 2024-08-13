@@ -1,9 +1,9 @@
 import "../Styles/nav.css";
 import { UserLoginBtn } from "./UserLoginBtn";
 import { UserLogoutBtn } from "./UserLogoutBtn";
-// import { useState } from "react";
+
 import { Link } from "react-router-dom";
-// import { Cart } from "./Cart";
+
 
 interface NavProps {
   menu: {
@@ -13,12 +13,7 @@ interface NavProps {
 }
 
 export function Nav({ menu }: NavProps) {
-  // const [showCart, setShowCart] = useState(false);
-
-  // function handleShowCart() {
-  //   setShowCart(true);
-  // }
-
+  
   return (
     <nav className="nav-- ">
       <ul className="flex items-center justify-between text-gray-900 tracking-wide">
@@ -34,18 +29,12 @@ export function Nav({ menu }: NavProps) {
 <UserLogoutBtn/>
         </div>
         <Link to="/cart">
-          {/* <button onClick={handleShowCart}>cart</button> */}
+        
            <button>cart</button>
         </Link>
     
       </ul>
-{/* toggled cart */}
-      {/* {showCart && (
-        <div>
-          <Cart />
-          <button onClick={() => setShowCart(false)}>close</button>
-        </div>
-      )} */}
+
     </nav>
   );
 }

@@ -30,10 +30,14 @@ export function Home({products}:HomeProps){
       <h1 className="text-7xl mt-10 text-center text-gray-900 ">THIS JUST IN</h1>
       <h3 className="text-4xl text-center text-gray-900 ">Check out our latest collection</h3>
       </div>
-      {products.length > 0 && (
-        <Products key={products[0].id} products={products[0]} />
-      )}
-
+    
+    <div className="products-container">
+{products.length > 0 && (
+  products.slice(0, 4).map(product => (
+    <Products key={product.id} products={product} />
+  ))
+)}
+</div>
     <Link to="/shop">
         <button>Shop</button>
     </Link>

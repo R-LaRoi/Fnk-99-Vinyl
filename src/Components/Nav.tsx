@@ -1,4 +1,6 @@
 import "../Styles/nav.css";
+import { UserLoginBtn } from "./UserLoginBtn";
+import { UserLogoutBtn } from "./UserLogoutBtn";
 // import { useState } from "react";
 import { Link } from "react-router-dom";
 // import { Cart } from "./Cart";
@@ -27,6 +29,9 @@ export function Nav({ menu }: NavProps) {
             <Link to={link.url}>{link.text}</Link>
           </li>
         ))}
+
+<UserLoginBtn/>
+<UserLogoutBtn/>
         </div>
         <Link to="/cart">
           {/* <button onClick={handleShowCart}>cart</button> */}

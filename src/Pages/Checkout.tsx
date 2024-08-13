@@ -1,35 +1,24 @@
 
 import { Cart } from "../Components/Cart";
-import { useAuth0 } from "@auth0/auth0-react";
+import { UserLogoutBtn } from "../Components/UserLogoutBtn";
 
 interface CheckoutProps {
   redirectUri?: string;
 }
 
-export function Checkout({ redirectUri }: CheckoutProps) {
-  console.log('Checkout component rendered');
-  const { logout, isAuthenticated } = useAuth0();
+export function Checkout({}: CheckoutProps) {
 
-  if (isAuthenticated) {
+ {
     return (
       <>
         <div className="text-9xl">Checkout</div>
         <Cart />
         <form action=""> this is a form</form>
 
-        <button
-          className="btn btn-primary logoutBtn"
-          onClick={() =>
-            logout({
-              logoutParams: { returnTo: redirectUri || window.location.origin }
-            })
-          }
-        >
-          Log Out
-        </button>
+   <UserLogoutBtn />
       </>
     );
   }
 
-  return null; 
+
 }

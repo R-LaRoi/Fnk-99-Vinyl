@@ -1,6 +1,6 @@
 import  axios from 'axios'
 import { useEffect, useState } from 'react'
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, Navigate } from 'react-router-dom'
 import { useAuth0 } from "@auth0/auth0-react";
 import { Nav } from "./Components/Nav"
 import {navMenu} from './Components/navLinks'
@@ -62,30 +62,26 @@ fetchData();
 
        <>
 <section className='app-main'>
-       <Nav menu={navMenu} />
+<Nav menu={navMenu} />
+
+
         <Routes>
-          <Route path="/" element={<Home products={products} />} />
-          <Route path="/cart" element={<Cart />} />
-          <Route path="/shop" element={<Shop products={products} />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/events" element={<Events />} />
-      
-{isAuthenticated ? (
-          <Routes>
-             <Route path="/checkout" element={<Checkout />}/>
-          </Routes>
-        ) : (
-          <Route path="/cart" element={<Cart />} />
-        )}
-
-
-          </Routes>
+  <Route path="/" element={<Home products={products} />} />
+  <Route path="/cart" element={<Cart />} />
+  <Route path="/shop" element={<Shop products={products} />} />
+  <Route path="/about" element={<About />} />
+  <Route path="/events" element={<Events />} />
+  {isAuthenticated ? (
+    <Route path="/checkout" element={<Checkout />} />
+  ) : (
+    <Route path="/shop" element={<Navigate to="/shop" />} />
+  )}
+</Routes>
         </section>
         </>
         
         ) : (
           <Loading title="FUNK 99" />) }
-
 
       </>
 

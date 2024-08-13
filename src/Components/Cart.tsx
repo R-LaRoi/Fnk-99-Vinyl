@@ -1,4 +1,4 @@
-import { CheckoutBtn } from "./CheckoutBtn";
+import { UserLoginBtn } from "./UserLoginBtn";
 
 interface CartItem {
   id: string;
@@ -14,8 +14,8 @@ export function Cart() {
 
 
   return (
-    <section >
-      <div >
+    <section>
+      <div>
          
       IMAGE goes here
          
@@ -31,7 +31,7 @@ export function Cart() {
         })
       }
     
-<CheckoutBtn/>
+<UserLoginBtn/>
 
       </div>
 

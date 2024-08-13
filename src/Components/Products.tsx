@@ -1,5 +1,6 @@
 import { AddToCartBtn } from "./AddToCartBtn";
 import "../Styles/products.css";
+import { ViewItemBtn } from "./ViewItemBtn";
 
 interface ProductsData{
 title:string;
@@ -27,9 +28,12 @@ return(
 <div className="price" id="price">{price}</div>
 </div>
 
-<div className="pd-desc"> <div className="text-3xl">{title}</div>
+<div className="pd-desc"> <div className="text-4xl">{title}</div>
 <div className="text-sm desc--">{desc}</div>
-<AddToCartBtn title={title} id={_id}/></div>
+<AddToCartBtn title={title} id={_id}/>
+<ViewItemBtn id={_id} title={title} desc={desc} img_url={img_url} price={price}/>
+
+</div>
 
 
 </div>
@@ -41,4 +45,3 @@ return(
 
 }
 
-// <img src="https://picsum.photos/id/236/800" alt=""></img>

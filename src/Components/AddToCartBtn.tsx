@@ -15,17 +15,14 @@ function AddToCartBtn({ id, title, price }: CartItem) {
     const savedCart = localStorage.getItem('userCart');
     return savedCart ? JSON.parse(savedCart) : [];
   });
+  console.log(cartItems)
 
   useEffect(() => {
 
     localStorage.setItem('userCart', JSON.stringify(cartItems));
   }, [cartItems]);
 
-  // function addToCart() {
-  //   const cartItem: CartItem = { id, title, price };
-  //   setCartItems(prevItems => [...prevItems, cartItem])
 
-  // }
   function addToCart() {
     setCartItems(prevItems => {
       const productItemIndex = prevItems.findIndex(item => item.id === id);

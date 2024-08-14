@@ -14,7 +14,6 @@ interface CartItem {
 export function Cart() {
   const [userCart, setUserCart] = useState<CartItem[]>([])
 
-
   useEffect(() => {
     const userCartData = localStorage.getItem('userCart');
     if (userCartData) {
@@ -34,13 +33,21 @@ export function Cart() {
 
   }
 
+  function cartTotal() {
+    return userCart.reduce((total, item) =>
+      total + parseFloat(item.price) * item.quantity, 0
+    )
+
+  }
 
 
   return (
     <section className="cart-container">
-      <PaymentForm />
+
+      <PaymentForm subtotal={cartTotal()} />
       <div className="cart-body">
         <h1>FNK 99 Records</h1>
+        <UserLoginBtn text="Create Account" />
         {userCart.length > 0 ? (
           <ul className="cart-list">
             {userCart.map((element) => (
@@ -54,12 +61,14 @@ export function Cart() {
                 <span className="item-price">${(parseFloat(element.price) * element.quantity).toFixed(2)}</span>
               </li>
             ))}
+            <div className="cart-subtotal">Subtotal: ${cartTotal()}</div>
           </ul>
+
         ) : (
           <p>Your cart is empty.</p>
         )}
 
-        <UserLoginBtn text="Create Account" />
+
       </div>
       <div>
         <div>

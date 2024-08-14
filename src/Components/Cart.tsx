@@ -22,6 +22,7 @@ export function Cart() {
     }
   }, []);
 
+  console.log(userCart)
 
   function updateQuantity(id: string, newQuantity: number) {
     const updatedCart = userCart.map(item =>

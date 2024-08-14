@@ -25,7 +25,7 @@ export function Nav({ menu }: NavProps) {
           </li>
         ))}
 
-<UserLoginBtn/>
+<UserLoginBtn text="Login"/>
 <UserLogoutBtn/>
         </div>
         <Link to="/cart">

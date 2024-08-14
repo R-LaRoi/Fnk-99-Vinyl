@@ -3,17 +3,17 @@ import { useState } from "react";
 interface AddToCartBtnProps{
 id: string;
 title:string;
-
+price:string;
 
 }
 
 const userCart: AddToCartBtnProps[] = []
 
-function AddToCartBtn({id, title, }:AddToCartBtnProps){
+function AddToCartBtn({id, title,price }:AddToCartBtnProps){
   const [cartItems, setCartItems] = useState<AddToCartBtnProps[]>([]);
 
 function addToCart(){
-const cartItem: AddToCartBtnProps = {id, title};
+const cartItem: AddToCartBtnProps = {id, title, price};
 
 userCart.push(cartItem)
 setCartItems(userCart)

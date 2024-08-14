@@ -1,14 +1,14 @@
 import "../Styles/loading.css"
 
 interface LoadingProps {
-title: string
+  title: string
 
 }
 
-export function Loading({title}: LoadingProps) {
+export function Loading({ title }: LoadingProps) {
   return (
     <section className="load-body">
-    <div className="text-3xl">{title}</div>
+      <div className="text-3xl">{title}</div>
     </section>
   )
 }

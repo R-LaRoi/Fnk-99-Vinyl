@@ -6,7 +6,23 @@
   height: 100vh;
 }
 .card-details {
-  display: flex;
-  flex-direction: row;
   gap: 1rem;
+}
+
+.cart-item {
+  border-bottom: 1px solid rgb(216, 216, 216);
+  padding: 0.5rem;
+  letter-spacing: 0.5px;
+  font-size: 1rem;
+}
+
+.qty-btn {
+  background-color: #e2fd00;
+  border: none;
+  padding: 0.6rem;
+}
+
+.order-btn:hover {
+  background-color: #e2fd00;
+  color: black;
 }

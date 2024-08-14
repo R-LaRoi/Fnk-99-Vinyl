@@ -4,11 +4,12 @@ const connectDB = require("./config/db");
 const mongoose = require("mongoose");
 const PORT = process.env.PORT;
 const productModel = require("./models/productModel");
+const orderData = require("./models/customerOrderModel");
 const cors = require("cors");
+const CustomerOrderModel = require("./models/customerOrderModel");
 
 app.use(cors({ credentials: true, origin: `http://localhost:${PORT}` }));
 
-app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
@@ -24,8 +25,34 @@ app.get("/api", async (req, res) => {
   });
 });
 
-app.listen(PORT, () => {
-  console.log(`Server listening on ${PORT}`);
+app.post("/api/customer-order", async (req, res) => {
+  try {
+    orderData = req.body;
+    console.log("Received order data:", req.body);
+    console.log(orderData);
+    const newOrder = new CustomerOrderModel(orderData);
+    const savedOrder = await newOrder.save();
+    res.status(201).json({
+      status: "success",
+      data: {
+        order: savedOrder,
+      },
+    });
+  } catch (error) {
+    console.log("Unable to save order", error);
+    res.status(500).json({
+      status: "error",
+      message: "Unable to save order",
+    });
+  }
 });
+
+app
+  .listen(PORT, () => {
+    console.log(`Server listening on ${PORT}`);
+  })
+  .on("error", (err) => {
+    console.error("Unable to start server:", err);
+  });
 
 connectDB();

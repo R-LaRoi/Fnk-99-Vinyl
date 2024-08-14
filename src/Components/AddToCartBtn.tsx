@@ -1,44 +1,60 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
-interface AddToCartBtnProps{
-id: string;
-title:string;
-price:string;
+interface CartItem {
+  id: string;
+  title: string;
+  price: string;
+  quantity: number;
 
 }
 
-const userCart: AddToCartBtnProps[] = []
+const userCart: CartItem[] = []
 
-function AddToCartBtn({id, title,price }:AddToCartBtnProps){
-  const [cartItems, setCartItems] = useState<AddToCartBtnProps[]>([]);
+function AddToCartBtn({ id, title, price }: CartItem) {
+  const [cartItems, setCartItems] = useState<CartItem[]>(() => {
+    const savedCart = localStorage.getItem('userCart');
+    return savedCart ? JSON.parse(savedCart) : [];
+  });
 
-function addToCart(){
-const cartItem: AddToCartBtnProps = {id, title, price};
+  useEffect(() => {
 
-userCart.push(cartItem)
-setCartItems(userCart)
-console.log(userCart)
+    localStorage.setItem('userCart', JSON.stringify(cartItems));
+  }, [cartItems]);
 
-localStorage.setItem('userCart', JSON.stringify(userCart));
+  // function addToCart() {
+  //   const cartItem: CartItem = { id, title, price };
+  //   setCartItems(prevItems => [...prevItems, cartItem])
 
-return cartItems
+  // }
+  function addToCart() {
+    setCartItems(prevItems => {
+      const productItemIndex = prevItems.findIndex(item => item.id === id);
 
+      if (productItemIndex !== -1) {
+
+        const updatedItems = [...prevItems];
+        updatedItems[productItemIndex] = {
+          ...updatedItems[productItemIndex],
+          quantity: updatedItems[productItemIndex].quantity + 1
+        };
+        return updatedItems;
+      } else {
+
+        return [...prevItems, { id, title, price, quantity: 1 }];
+      }
+    });
   }
 
-
-  return(
-<>
-
-<button className="bg-gray-900 hover:bg-stone-700 text-white font-bold py-2 px-4 rounded text-xs mr-2" value={id} onClick={addToCart}>
-  Add to Cart
-</button>
-
-</>
-
-
-  )
-
-
+  return (
+    <button
+      className="bg-gray-900 hover:bg-stone-700 text-white font-bold py-2 px-4 rounded text-xs mr-2"
+      onClick={addToCart}
+    >
+      Add to Cart
+    </button>
+  );
 }
 
-export {userCart, AddToCartBtn}
+
+
+export { userCart, AddToCartBtn }

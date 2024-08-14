@@ -2,28 +2,29 @@ import "../Styles/hero.css"
 
 type HeroProps = {
 
-video: string
-title: string
+  video: string
+  title: string
 
 }
 
-export function Hero({video, title}: HeroProps) {
+export function Hero({ video, title }: HeroProps) {
   return (
     <>
-    <div className='hero-video'>
-<video src={video}
+      <div className='hero-video'>
+        <video src={video}
           autoPlay
           muted
-          loop 
+          loop
           typeof='video/mp4'
-          >
-          </video>
-          <div>
-            <div className="overlay">{title}</div>
-            {/* <span>est.2024</span> */}
-            </div>
-    
-    </div>
+        >
+        </video>
+        <div>
+          <div className="overlay">{title}</div>
+          {/* <span>est.2024</span> */}
+        </div>
+
+      </div>
     </>
-    
-)}
+
+  )
+}

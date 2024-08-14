@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-
+import { ItemAddedModal } from "./ItemAddedModal";
 interface CartItem {
   id: string;
   title: string;
@@ -17,6 +17,15 @@ function AddToCartBtn({ id, title, price }: CartItem) {
   });
   console.log(cartItems)
 
+  const [isAdded, setIsAdded] = useState(false);
+
+  function handleShowPopup() {
+    setIsAdded(true);
+    setTimeout(() => {
+      setIsAdded(false);
+    }, 2500);
+  }
+
   useEffect(() => {
 
     localStorage.setItem('userCart', JSON.stringify(cartItems));
@@ -24,6 +33,7 @@ function AddToCartBtn({ id, title, price }: CartItem) {
 
 
   function addToCart() {
+    handleShowPopup()
     setCartItems(prevItems => {
       const productItemIndex = prevItems.findIndex(item => item.id === id);
 
@@ -43,12 +53,17 @@ function AddToCartBtn({ id, title, price }: CartItem) {
   }
 
   return (
-    <button
-      className="bg-gray-900 hover:bg-stone-700 text-white font-bold py-2 px-4 rounded text-xs mr-2"
-      onClick={addToCart}
-    >
-      Add to Cart
-    </button>
+    <>
+      <button
+        className="bg-gray-900 hover:bg-stone-700 text-white font-bold py-2 px-4 rounded text-xs mr-2"
+        onClick={addToCart}
+      >
+        Add to Cart
+      </button>
+      {isAdded && (
+        <ItemAddedModal title={title} />
+      )}
+    </>
   );
 }
 

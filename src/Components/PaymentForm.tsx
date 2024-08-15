@@ -1,4 +1,4 @@
-import { useState, ChangeEvent, FormEvent } from 'react';
+import { useState, ChangeEvent, FormEvent, useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
@@ -48,45 +48,68 @@ export function PaymentForm({ subtotal, orderId }: PaymentFormProps) {
   async function orderSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     console.log(formData);
-
-
-    if (orderSubmitted) {
-
-      try {
-        const result = await axios.post('/api/customer-order', formData, {
-          headers: {
-            'Content-Type': 'application/json'
-          }
-        });
-        setResponse(result.data);
-        console.log(result.data);
-
-        // need to clear the cart-----
-
-        setFormData({
-          subtotal,
-          orderId,
-          email: '',
-          fullName: '',
-          shipping: '',
-          street: '',
-          state: '',
-          zip: '',
-          cardNumber: '',
-          expiry: '',
-          cvc: '',
-        });
-
-
-      } catch (err: any) {
-        setError(err)
-        console.error('Error saving order', err);
-      } finally {
-        setOrderSubmitted(false);
-      }
-    }
-    navigate('/order-confirmation')
+    setOrderSubmitted(true)
   }
+
+  useEffect(() => {
+    async function subOrder() {
+      if (orderSubmitted) {
+        try {
+          const result = await axios.post('/api/customer-order', formData, {
+            headers: {
+              'Content-Type': 'application/json'
+            }
+          });
+          setResponse(result.data);
+          console.log(result.data);
+
+          setFormData({
+            subtotal,
+            orderId,
+            email: '',
+            fullName: '',
+            shipping: '',
+            street: '',
+            state: '',
+            zip: '',
+            cardNumber: '',
+            expiry: '',
+            cvc: '',
+          });
+
+        } catch (err: any) {
+          setError(err);
+          console.error('Error saving order', err);
+        } finally {
+          setOrderSubmitted(false);
+        }
+
+        navigate('/order-confirmation');
+      }
+    };
+
+    subOrder();
+  }, [orderSubmitted, formData, subtotal, orderId, navigate, setResponse, setError, setFormData]);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   function handleChange(event: ChangeEvent<HTMLInputElement>) {
     const { name, value } = event.target;

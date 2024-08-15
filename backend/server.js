@@ -4,6 +4,7 @@ const connectDB = require("./config/db");
 const mongoose = require("mongoose");
 const PORT = process.env.PORT;
 const productModel = require("./models/productModel");
+const profileModel = require("./models/profileModel");
 const orderData = require("./models/customerOrderModel");
 const cors = require("cors");
 const CustomerOrderModel = require("./models/customerOrderModel");
@@ -21,6 +22,18 @@ app.get("/api", async (req, res) => {
     status: "success",
     data: {
       allVinyl,
+    },
+  });
+});
+
+app.get("/api/artist-profiles", async (req, res) => {
+  const allProfiles = await profileModel.find();
+  console.log(allProfiles);
+  res.status(200).json({
+    results: allProfiles.length,
+    status: "success",
+    data: {
+      allProfiles,
     },
   });
 });

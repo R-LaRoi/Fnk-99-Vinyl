@@ -1,30 +1,47 @@
-# React + TypeScript + Vite
+# FNK 99 RECORDS
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+FNK 99 is a full-stack e-commerce application that simulates an online record store. It allows users to browse arist and purchase vinyl records. The application is built using the MERN stack (MongoDB, Express, React, and Node.js) to provide a seamless and responsive user experience.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- User authentication and authorization using AUTH0
+- Browse and search functionality for vinyl records
+- Detailed vinyl pages with album details
+- Artist Profiles pag with artist details
+- Shopping cart and checkout process
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+**Client:**
 
-- Configure the top-level `parserOptions` property like this:
+- React
+- TailwindCSS
+- Auth0
+- Nanoid
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json', './tsconfig.app.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+**Server:**
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+- Node
+- Express
+- MongoDB
+- CRUD API
+
+# FNK 99 RECORDS
+
+FNK 99 is a full-stack e-commerce application that simulates an online record store. It allows users to browse arist and purchase vinyl records. The application is built using the MERN stack (MongoDB, Express, React, and Node.js) to provide a seamless and responsive user experience.
+
+## Screenshots
+
+![App Screenshot](https://github.com/user-attachments/assets/433ea508-295a-41dc-a2b8-13e6f91d712a)
+
+![App Screenshot](https://github.com/user-attachments/assets/91a536cd-37e8-48d0-a9d8-497635c45404)
+
+![App Screenshot](https://github.com/user-attachments/assets/7657cc41-6a53-46e8-acef-c2ce75469df8)
+
+![App Screenshot](https://github.com/user-attachments/assets/d0e2970d-2cd5-4cba-aab3-fa1aec0799f6)
+
+![App Screenshot](https://github.com/user-attachments/assets/4378b7f5-694e-4b90-9d3c-8e7bbe7624b7)
+
+![App Screenshot](https://github.com/user-attachments/assets/642b71d2-47ea-49f2-b924-2f13e08346ae)
+
+![App Screenshot](https://github.com/user-attachments/assets/28409261-c4a7-4cd9-8e3d-a829e50ea2d8)

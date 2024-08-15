@@ -2,7 +2,7 @@
 import { Footer } from "../Components/Footer";
 import { Products } from "../Components/Products"
 import { Hero } from '../Components/Hero'
-import { ArtistProfiles } from "./ArtistProfiles";
+// import { ArtistProfiles } from "./ArtistProfiles";
 
 interface Product {
   id: string;
@@ -41,7 +41,7 @@ export function Home({ products }: HomeProps) {
         )}
       </div>
       <div className="mt-20">
-        <ArtistProfiles />
+        {/* <ArtistProfiles profiles={profiles} /> */}
       </div>
 
       <Footer />

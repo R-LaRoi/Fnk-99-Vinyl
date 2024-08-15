@@ -15,12 +15,14 @@ import './App.css'
 import { OrderConfirmation } from './Pages/OrderConfirmation';
 
 const URL = "https://fnk-99-vinyl-server.onrender.com/api";
-
+const AP_URL = "https://fnk-99-vinyl-server.onrender.com/api/artist-profiles"
 
 
 function App() {
   const [products, setProducts] = useState([]);
+  const [profiles, setProfiles] = useState([]);
   console.log(products);
+  console.log(profiles)
   const [loading, setLoading] = useState(true)
   const { isAuthenticated } = useAuth0();
 
@@ -36,6 +38,7 @@ function App() {
           const { data } = response.data;
           const { allVinyl } = data;
           setProducts(allVinyl);
+
         })
         .catch(error => {
           if (error.response) {
@@ -51,6 +54,30 @@ function App() {
 
     }
     fetchData();
+
+    async function fetchProfiles() {
+      axios.get(AP_URL)
+        .then(response => {
+          const { data } = response.data;
+          const { allProfiles } = data;
+          setProfiles(allProfiles);
+        })
+        .catch(error => {
+          if (error.response) {
+            console.log('Error response:', error.response);
+          } else if (error.request) {
+
+            console.log('Error request:', error.request);
+          } else {
+
+            console.log('Error message:', error.message);
+          }
+        });
+
+    }
+    fetchProfiles();
+
+
   }, [])
 
 
@@ -70,8 +97,8 @@ function App() {
               <Route path="/cart" element={<Cart />} />
               <Route path="/shop" element={<Shop products={products} />} />
               <Route path="/about" element={<About />} />
-              <Route path="/artists" element={<ArtistProfiles />} />
-              <Route path="/order-confirmation" element={<OrderConfirmation />} />
+              <Route path="/artists" element={<ArtistProfiles profiles={profiles} />} />
+              <Route path="/order-confirmation" element={<OrderConfirmation />} />``
               {isAuthenticated ? (
                 <Route path="/checkout" element={<Checkout />} />
               ) : (

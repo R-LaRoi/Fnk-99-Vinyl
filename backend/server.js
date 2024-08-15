@@ -9,7 +9,12 @@ const orderData = require("./models/customerOrderModel");
 const cors = require("cors");
 const CustomerOrderModel = require("./models/customerOrderModel");
 
-app.use(cors({ credentials: true, origin: `http://localhost:${PORT}` }));
+app.use(
+  cors({
+    credentials: true,
+    origin: `https://fnk-99-vinyl-client.onrender.com`,
+  })
+);
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));

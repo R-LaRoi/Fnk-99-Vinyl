@@ -7,7 +7,7 @@ import { navMenu } from './Components/navLinks'
 import { Cart } from './Components/Cart'
 import { Shop } from './Pages/Shop'
 import { About } from './Pages/About'
-import { Events } from './Pages/Events'
+import { ArtistProfiles } from './Pages/ArtistProfiles'
 import { Home } from './Pages/Home'
 import { Loading } from './Components/Loading'
 import { Checkout } from './Pages/Checkout'
@@ -70,7 +70,7 @@ function App() {
               <Route path="/cart" element={<Cart />} />
               <Route path="/shop" element={<Shop products={products} />} />
               <Route path="/about" element={<About />} />
-              <Route path="/events" element={<Events />} />
+              <Route path="/artists" element={<ArtistProfiles />} />
               <Route path="/order-confirmation" element={<OrderConfirmation />} />
               {isAuthenticated ? (
                 <Route path="/checkout" element={<Checkout />} />

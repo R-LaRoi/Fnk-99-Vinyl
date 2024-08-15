@@ -1,7 +1,7 @@
 
 export const navMenu = [
   { url: '/', text: 'Home' },
-  { url: '/events', text: 'events' },
+  { url: '/artists', text: 'artists' },
   { url: '/shop', text: 'shop' },
   { url: '/about', text: 'about' },
 ];

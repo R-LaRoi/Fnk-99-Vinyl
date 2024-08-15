@@ -42,7 +42,7 @@ export function ArtistProfiles({ }: ArtProps) {
 
         <div className="column-two"></div>
       </section>
-      <Footer />
+
     </>
   )
 }

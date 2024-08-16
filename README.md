@@ -28,7 +28,7 @@ FNK 99 is a full-stack e-commerce application that simulates an online record st
 
 # FNK 99 RECORDS
 
-FNK 99 is a full-stack e-commerce application that simulates an online record store. It allows users to browse arist and purchase vinyl records. The application is built using the MERN stack (MongoDB, Express, React, and Node.js) to provide a seamless and responsive user experience.
+FNK 99 is a full-stack e-commerce application that simulates an online record store. It allows users to browse artist and purchase vinyl records. The application is built using the MERN stack (MongoDB, Express, React, and Node.js) to provide a seamless and responsive user experience.
 
 ## Screenshots
 

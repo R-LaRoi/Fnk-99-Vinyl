@@ -2,6 +2,7 @@
   "name": "fnk-99-vinyl",
   "private": true,
   "version": "0.0.0",
+   "proxy": "https://fnk-99-vinyl-server.onrender.com/",
   "type": "module",
   "scripts": {
     "dev": "vite",

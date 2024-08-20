@@ -9,10 +9,23 @@ const orderData = require("./models/customerOrderModel");
 const cors = require("cors");
 const CustomerOrderModel = require("./models/customerOrderModel");
 
+const allowedOrigins = [
+  "https://fnk-99-vinyl-client.onrender.com",
+  "http://localhost:5173",
+];
+
 app.use(
   cors({
     credentials: true,
-    origin: `https://fnk-99-vinyl-client.onrender.com`,
+    origin: (origin, callback) => {
+      if (!origin || allowedOrigins.indexOf(origin) !== -1) {
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS"));
+      }
+    },
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"],
   })
 );
 
@@ -45,7 +58,7 @@ app.get("/api/artist-profiles", async (req, res) => {
 
 app.post("/api/customer-order", async (req, res) => {
   try {
-    orderData = req.body;
+    const orderData = req.body;
     console.log("Received order data:", req.body);
     console.log(orderData);
     const newOrder = new CustomerOrderModel(orderData);

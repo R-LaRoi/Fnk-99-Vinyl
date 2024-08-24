@@ -1,5 +1,5 @@
 .image-profile {
-  width: 100%;
+  width: 720px;
 }
 
 .ap-container {
@@ -16,7 +16,8 @@
 .ap-desc {
   font-family: "Visby";
   text-transform: lowercase;
-  line-height: 1;
+
+  margin-left: 30px;
 }
 
 .artist-profile {
@@ -31,4 +32,19 @@
   justify-content: center;
   align-items: center;
   padding: 2rem;
+}
+
+.profiles-container {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: rgba(72, 71, 71, 0.2) 0px 3px 9px 0px;
+}
+
+.card-text {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  margin: 3rem;
 }

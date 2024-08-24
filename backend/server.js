@@ -11,7 +11,7 @@ const CustomerOrderModel = require("./models/customerOrderModel");
 
 const allowedOrigins = [
   "https://fnk-99-vinyl-client.onrender.com",
-  "http://localhost:5173",
+  "https://localhost:5173",
 ];
 
 app.use(

@@ -51,7 +51,7 @@ export function Home({ products }: HomeProps) {
             <div className="column-one">
               <img src="https://github.com/user-attachments/assets/98f3d686-b656-4556-8c6c-392a1a4f46b8" alt="" className="image-profile" />
             </div>
-            <div className="column-two">
+            <div className="column-two text-center text-gray-900  ">
               <div>
                 <h1 className="text-7xl">Shakes & Les</h1>
                 <h3>FUNK 99</h3>

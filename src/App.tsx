@@ -15,7 +15,6 @@ import './App.css'
 import { OrderConfirmation } from './Pages/OrderConfirmation';
 
 
-
 const URL = "https://fnk-99-vinyl-server.onrender.com/api";
 const AP_URL = "https://fnk-99-vinyl-server.onrender.com/api/artist-profiles"
 
@@ -102,7 +101,7 @@ function App() {
               <Route path="/cart" element={<Cart />} />
               <Route path="/shop" element={<Shop products={products} />} />
               <Route path="/about" element={<About />} />
-              <Route path="/artists" element={<ArtistProfiles profiles={profiles} />} />
+              <Route path="/artists" element={<ArtistProfiles profiles={profiles} products={products} />} />
               <Route path="/order-confirmation" element={<OrderConfirmation />} />``
               {isAuthenticated ? (
                 <Route path="/checkout" element={<Checkout />} />

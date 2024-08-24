@@ -1,4 +1,4 @@
-
+import Footer from "../Components/Footer";
 import { Products } from "../Components/Products"
 import "../Styles/products.css";
 
@@ -31,8 +31,9 @@ export function Shop({ products }: ShopProps) {
           <Products key={index} products={products} />
         ))}
       </div>
-
-
+      <div className="mt-8 pt-4">
+        <Footer />
+      </div>
     </section>
 
   )

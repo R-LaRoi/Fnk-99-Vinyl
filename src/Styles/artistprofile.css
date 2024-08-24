@@ -48,3 +48,12 @@
   justify-content: center;
   margin: 3rem;
 }
+
+.sp-btn {
+  background-color: #e2fd00;
+}
+
+.sp-btn:hover {
+  background-color: #e2fd00;
+  box-shadow: rgba(72, 71, 71, 0.2) 0px 3px 9px 0px;
+}

@@ -1,6 +1,10 @@
 import { Link } from "react-router-dom"
 import "../Styles/artistprofile.css"
 import { Profiles } from "../Components/AProfiles"
+import { Products } from "../Components/Products"
+import Footer from "../Components/Footer"
+
+
 
 interface Profiles {
   desc: string;
@@ -11,13 +15,27 @@ interface Profiles {
 
 }
 
+interface Product {
+  id: string;
+  img_url: string;
+  is_available: string;
+  name: string;
+  price: string;
+  qty: string;
+  title: string;
+  type: string;
+  _id: string;
+  desc: string;
+}
+
 interface ProfileProps {
   profiles: ProfileProps[]
+  products: Product[]
 
 }
 
 
-export function ArtistProfiles({ profiles }: ProfileProps) {
+export function ArtistProfiles({ profiles, products }: ProfileProps) {
 
   return (
     <>
@@ -28,41 +46,36 @@ export function ArtistProfiles({ profiles }: ProfileProps) {
           <div className="ap-line"></div>
         </div>
         <div className="artist-profile mt-10">
-          {/* <div className="column-one">
-            <img src="https://github.com/user-attachments/assets/98f3d686-b656-4556-8c6c-392a1a4f46b8" alt="" className="image-profile" />
-          </div> */}
-          {/* <div className="column-two ">
-            <div>
-              <h1 className="text-7xl">Shakes & Les</h1>
-              <h3>FUNK 99</h3>
-              <p className="ap-desc">"Funk 99" is more than just a song; it's a celebration of culture, rhythm, and community. With its catchy intro and engaging lyrics, Shakes & Les, along with LeeMcKrazy, have crafted a track that not only entertains but also invites listeners to join in the fun. As the Amapiano genre continues to evolve, "Funk 99" stands out as a testament to the creativity and vibrancy of South African music.</p>
 
-            </div>
-          </div> */}
         </div>
       </section>
       <section className="a-profiles">
+
         <div className="">
           {profiles.map((profile: any, index: number) => (
             <Profiles key={index} profiles={profile} />
           ))}
         </div>
 
-
-        <div className="column-one">
+        <div className="column-one p-6">
+          <h1 className="text-7xl ">SHOP COLLECTION</h1>
           <Link to="/shop">
-            <button>Shop</button>
+            <button>More Vinyl</button>
           </Link>
         </div>
 
         <div className="column-two">
+          <div className="products-container">
+            {products.length > 0 && (
+              products.slice(7, 11).map(product => (
+                <Products key={product.id} products={product} />
+              ))
+            )}
 
-
-
-
-
+          </div>
         </div>
       </section>
+      <Footer />
 
     </>
   )

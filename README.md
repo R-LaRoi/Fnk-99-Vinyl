@@ -36,6 +36,8 @@ FNK 99 is a full-stack e-commerce application that simulates an online record st
 
 ![App Screenshot](https://github.com/user-attachments/assets/91a536cd-37e8-48d0-a9d8-497635c45404)
 
+![App Screenshot](https://github.com/user-attachments/assets/8f624638-e2db-491e-ac61-7f1631f44a87)
+
 ![App Screenshot](https://github.com/user-attachments/assets/7657cc41-6a53-46e8-acef-c2ce75469df8)
 
 ![App Screenshot](https://github.com/user-attachments/assets/58bad947-48f0-4516-8594-e99798a55150)

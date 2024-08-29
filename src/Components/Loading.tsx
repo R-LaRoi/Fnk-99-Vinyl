@@ -8,7 +8,8 @@ interface LoadingProps {
 export function Loading({ title }: LoadingProps) {
   return (
     <section className="load-body">
-      <div className="text-3xl">{title}</div>
+      <div className="text-3xl loader">{title}</div>
+
     </section>
   )
 }

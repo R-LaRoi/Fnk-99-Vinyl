@@ -12,3 +12,7 @@
   height: 200px;
   background-color: #e2fd00;
 }
+
+.title {
+  font-kerning: none;
+}

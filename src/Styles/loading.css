@@ -4,5 +4,11 @@
   width: 100%;
   justify-content: center;
   align-items: center;
-  background: #e2fd00;
+  /* background: #e2fd00; */
+}
+
+.box {
+  width: 200px;
+  height: 200px;
+  background-color: #e2fd00;
 }

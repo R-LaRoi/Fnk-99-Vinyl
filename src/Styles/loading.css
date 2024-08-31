@@ -16,3 +16,12 @@
 .title {
   font-kerning: none;
 }
+
+@media screen and (max-width: 568px) {
+  .title {
+    position: fixed;
+    top: 25%;
+    left: 50%;
+    overflow: hidden;
+  }
+}

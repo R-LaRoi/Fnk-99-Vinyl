@@ -38,15 +38,14 @@ export function Loading({ title }: LoadingProps) {
     gsap.to(".box", {
       duration: 1,
       rotation: 540,
-      scale: 5,
+      scale: 6,
 
     });
-
 
     gsap.to(titleRef.current, {
       rotation: -360,
       duration: .2,
-      scale: 4,
+      scale: 5,
 
     });
 
@@ -54,7 +53,7 @@ export function Loading({ title }: LoadingProps) {
 
   return (
     <>
-      <section className="fixed inset-0 flex items-center justify-center z-50">
+      <section className="fixed inset-0 flex items-center justify-center z-50 ">
         <div ref={titleRef} className="title text-9xl font-bold">{title}</div>
       </section>
       <section className="load-body" ref={main}>

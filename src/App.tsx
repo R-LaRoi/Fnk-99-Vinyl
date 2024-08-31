@@ -113,7 +113,7 @@ function App() {
         </>
 
       ) : (
-        <Loading title="FUNK 99" />)}
+        <Loading title="FNK 99" />)}
 
     </>
 

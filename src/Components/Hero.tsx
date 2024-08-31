@@ -19,8 +19,10 @@ export function Hero({ video, title }: HeroProps) {
         >
         </video>
         <div>
-          <div className="overlay">{title}</div>
-          {/* <span>est.2024</span> */}
+          <div className="overlay">{title}
+            <div className="sub-text">We're here to keep the music playing.</div>
+          </div>
+
         </div>
 
       </div>

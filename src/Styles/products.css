@@ -83,3 +83,18 @@
   width: 100%;
   column-gap: 2rem;
 }
+
+@media screen and (max-width: 768px) {
+  .products-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.25rem;
+    padding: 0.5rem;
+  }
+}
+@media screen and (max-width: 568px) {
+  .products-container {
+    grid-template-columns: 1fr;
+    gap: 0.25rem;
+    padding: 0.5rem;
+  }
+}

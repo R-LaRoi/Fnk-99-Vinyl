@@ -15,11 +15,11 @@ import './App.css'
 import { OrderConfirmation } from './Pages/OrderConfirmation';
 
 
-const URL = "https://fnk-99-vinyl-server.onrender.com/api";
-const AP_URL = "https://fnk-99-vinyl-server.onrender.com/api/artist-profiles"
+// const URL = "https://fnk-99-vinyl-server.onrender.com/api";
+// const AP_URL = "https://fnk-99-vinyl-server.onrender.com/api/artist-profiles"
 
-// const URL = "/api";
-// const AP_URL = "api/artist-profiles"
+const URL = "/api";
+const AP_URL = "api/artist-profiles"
 
 
 function App() {

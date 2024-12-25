@@ -90,30 +90,30 @@ function App() {
 
   return (
     <>
-      {loading === false ? (
+      {/* {loading === false ? ( */}
 
-        <>
-          <section className='app-main'>
-            <Nav menu={navMenu} />
+      <>
+        <section className='app-main'>
+          <Nav menu={navMenu} />
 
-            <Routes>
-              <Route path="/" element={<Home products={products} />} />
-              <Route path="/cart" element={<Cart />} />
-              <Route path="/shop" element={<Shop products={products} />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/artists" element={<ArtistProfiles profiles={profiles} products={products} />} />
-              <Route path="/order-confirmation" element={<OrderConfirmation />} />``
-              {isAuthenticated ? (
-                <Route path="/checkout" element={<Checkout />} />
-              ) : (
-                <Route path="/shop" element={<Navigate to="/shop" />} />
-              )}
-            </Routes>
-          </section>
-        </>
+          <Routes>
+            <Route path="/" element={<Home products={products} />} />
+            <Route path="/cart" element={<Cart />} />
+            <Route path="/shop" element={<Shop products={products} />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/artists" element={<ArtistProfiles profiles={profiles} products={products} />} />
+            <Route path="/order-confirmation" element={<OrderConfirmation />} />``
+            {isAuthenticated ? (
+              <Route path="/checkout" element={<Checkout />} />
+            ) : (
+              <Route path="/shop" element={<Navigate to="/shop" />} />
+            )}
+          </Routes>
+        </section>
+      </>
 
-      ) : (
-        <Loading title="FNK 99" />)}
+      {/* ) : (
+        <Loading title="FNK 99" />)} */}
 
     </>
 

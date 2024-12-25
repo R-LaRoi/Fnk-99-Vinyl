@@ -1,7 +1,56 @@
 .hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.hero-video video {
   width: 100%;
-  z-index: 10;
+  height: 100%;
   object-fit: cover;
+}
+
+.blocks {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+
+.block {
+  flex: 1;
+  height: 100%;
+  background: #000;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.header {
+  padding-top: 9rem;
+  width: 70%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+h1 {
+  font-size: 6vw;
+  font-weight: 800;
+  line-height: 100%;
+  color: white;
+}
+
+.header-item {
+  position: relative;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  mix-blend-mode: difference;
+}
+
+.header-item h1 {
   position: relative;
 }
 
@@ -36,6 +85,40 @@
     line-height: 1;
   }
 }
+.counter {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  bottom: 6em;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.counter p {
+  position: relative;
+  font-size: 30px;
+  color: yellow;
+  line-height: 120%;
+}
+
+@media (max-width: 900px) {
+  .tagline {
+    width: 80%;
+    bottom: 10em;
+  }
+
+  .counter {
+    bottom: 15em;
+  }
+
+  .block {
+    margin-left: -1px;
+  }
+}
+
 @media (max-width: 568px) {
   .overlay {
     margin-top: 10%;

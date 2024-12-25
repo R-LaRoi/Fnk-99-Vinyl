@@ -1,7 +1,7 @@
 
 import { Footer } from "../Components/Footer";
 import { Products } from "../Components/Products"
-import { Hero } from '../Components/Hero'
+import { Hero } from '../Components/HeroTwo'
 import "../Styles/hero.css"
 // import { ArtistProfiles } from "./ArtistProfiles";
 
@@ -29,6 +29,8 @@ export function Home({ products }: HomeProps) {
   return (
     <>
       <Hero video={heroVideo} title="FNK 99 RECORDS" />
+
+
       <div className="text-center mb-10">
         <h1 className="text-9xl mt-10 text-center text-gray-900">THIS JUST IN</h1>
         <h3 className="text-4xl text-center text-gray-900 ">Check out our latest collection</h3>

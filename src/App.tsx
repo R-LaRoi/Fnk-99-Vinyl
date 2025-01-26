@@ -9,7 +9,7 @@ import { Shop } from './Pages/Shop'
 import { About } from './Pages/About'
 import { ArtistProfiles } from './Pages/ArtistProfiles'
 import { Home } from './Pages/Home'
-import { Loading } from './Components/Loading'
+// import { Loading } from './Components/Loading'
 import { Checkout } from './Pages/Checkout'
 import './App.css'
 import { OrderConfirmation } from './Pages/OrderConfirmation';
@@ -27,12 +27,12 @@ function App() {
   const [profiles, setProfiles] = useState([]);
   console.log(products);
   console.log(profiles)
-  const [loading, setLoading] = useState(true)
+  // const [loading, setLoading] = useState(true)
   const { isAuthenticated } = useAuth0();
 
-  useEffect(() => {
-    setTimeout(() => setLoading(false), 2000)
-  }, [])
+  // useEffect(() => {
+  //   setTimeout(() => setLoading(false), 2000)
+  // }, [])
 
   useEffect(() => {
 

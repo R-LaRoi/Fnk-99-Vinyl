@@ -7,7 +7,7 @@ FNK 99 is a full-stack e-commerce application. It allows users to browse artist 
 - User authentication and authorization using AUTH0
 - Browse and search functionality for vinyl records
 - Detailed vinyl pages with album details
-- Artist Profiles pag with artist details
+- Artist Profiles page with artist details
 - Shopping cart and checkout process
 
 ## Tech Stack

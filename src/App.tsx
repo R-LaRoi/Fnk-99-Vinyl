@@ -9,7 +9,7 @@ import { Shop } from './Pages/Shop'
 import { About } from './Pages/About'
 import { ArtistProfiles } from './Pages/ArtistProfiles'
 import { Home } from './Pages/Home'
-// import { Loading } from './Components/Loading'
+// import LoadVideo from './Components/LoadingTwo'
 import { Checkout } from './Pages/Checkout'
 import './App.css'
 import { OrderConfirmation } from './Pages/OrderConfirmation';
@@ -31,7 +31,7 @@ function App() {
   const { isAuthenticated } = useAuth0();
 
   // useEffect(() => {
-  //   setTimeout(() => setLoading(false), 2000)
+  //   setTimeout(() => setLoading(false), 5000)
   // }, [])
 
   useEffect(() => {
@@ -113,7 +113,7 @@ function App() {
       </>
 
       {/* ) : (
-        <Loading title="FNK 99" />)} */}
+        <LoadVideo />)} */}
 
     </>
 

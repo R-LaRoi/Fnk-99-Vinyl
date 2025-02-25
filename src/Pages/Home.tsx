@@ -1,7 +1,7 @@
 
 import { Footer } from "../Components/Footer";
 import { Products } from "../Components/Products"
-import { Hero } from '../Components/HeroTwo'
+import { Hero } from '../Components/Hero'
 import "../Styles/hero.css"
 // import { ArtistProfiles } from "./ArtistProfiles";
 

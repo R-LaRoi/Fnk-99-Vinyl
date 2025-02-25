@@ -20,7 +20,7 @@ export function Nav({ menu }: NavProps) {
   };
 
   return (
-    <nav className="nav-- px-4 py-2">
+    <nav className="nav--">
       <div className="flex items-center justify-between text-gray-900 tracking-wide">
         <div className="flex items-center space-x-4">
           <div>

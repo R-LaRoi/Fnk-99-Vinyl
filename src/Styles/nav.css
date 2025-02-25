@@ -11,6 +11,7 @@ body {
   background-color: #e2fd00;
   width: 100%;
   z-index: 100;
+  margin-top: -50px;
   position: fixed;
   padding: 0.8rem;
 }

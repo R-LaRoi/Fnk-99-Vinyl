@@ -13,7 +13,7 @@ interface ViewItemBtnProps {
 
 export function Modal({ item, onClose }: { item: ViewItemBtnProps, onClose: () => void }) {
   return ReactDOM.createPortal(
-    <div className="modal-- fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50 p-4">
+    <div className="modal-- fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-99 p-4">
       <div className="bg-white rounded-lg w-full max-w-5xl overflow-hidden">
         <div className="flex flex-col md:flex-row">
           <div className="md:w-1/2 p-4 md:p-8">

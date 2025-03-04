@@ -1,51 +1,61 @@
-# FNK 99 RECORDS (In Progress)
+# FNK 99 RECORDS
 
-FNK 99 is a full-stack e-commerce application. It allows users to browse artist and purchase vinyl records. The application is built using the MERN stack (MongoDB, Express, React, and Node.js) to provide a seamless and responsive user experience.
+FNK 99 is a full-stack e-commerce application that simulates an online record store. It allows users to browse artists and purchase vinyl records. The application is built using the MERN stack (MongoDB, Express, React, and Node.js) to provide a seamless and responsive user experience.
+
+## Overview
+
+This application offers a comprehensive online vinyl shopping experience, featuring artist profiles, a product catalog, shopping cart functionality, and secure checkout process. It leverages modern web technologies to create an engaging and user-friendly interface for vinyl enthusiasts.
 
 ## Features
 
-- User authentication and authorization using AUTH0
-- Browse and search functionality for vinyl records
-- Detailed vinyl pages with album details
-- Artist Profiles page with artist details
-- Shopping cart and checkout process
+- **User Authentication**: Secure login and registration using Auth0.
+- **Product Catalog**: Browse and search functionality for vinyl records.
+- **Artist Profiles**: Dedicated pages with artist details and their discography.
+- **Shopping Cart**: Add and manage items in the cart.
+- **Checkout Process**: Secure checkout for authenticated users.
+- **Responsive Design**: Optimized for both desktop and mobile devices.
 
-## Tech Stack
+## Technologies Used
 
-**Client:**
+### Frontend:
+- **React**: For building the user interface.
+- **React Router**: For client-side routing.
+- **Axios**: For making API requests.
+- **TailwindCSS**: For styling and layout.
+- **Auth0**: For user authentication.
 
-- React
-- TailwindCSS
-- Auth0
-- Nanoid
+### Backend:
+- **Node.js**: Server-side logic.
+- **Express.js**: RESTful API framework.
+- **MongoDB**: NoSQL database for storing data.
+- **RESTful API**: Architecture for data exchange.
 
-**Server:**
+### Key Components
 
-- Node
-- Express
-- MongoDB
-- CRUD API
+- `App.js`: Main component handling routing and data fetching.
+- `Nav.js`: Navigation component.
+- `Cart.js`: Shopping cart functionality.
+- `Shop.js`: Displays product catalog.
+- `ArtistProfiles.js`: Shows artist information.
+- `Checkout.js`: Handles the checkout process.
 
-# FNK 99 RECORDS
+## API Integration
 
-FNK 99 is a full-stack e-commerce application that simulates an online record store. It allows users to browse artist and purchase vinyl records. The application is built using the MERN stack (MongoDB, Express, React, and Node.js) to provide a seamless and responsive user experience.
+The application interacts with two main API endpoints:
+1. `https://fnk-99-vinyl-server.onrender.com/api` for product data.
+2. `https://fnk-99-vinyl-server.onrender.com/api/artist-profiles` for artist profile data.
+
+Data is fetched using Axios and managed using React's useState and useEffect hooks.
+
+## Routing
+
+React Router is used for navigation, with protected routes for authenticated users.
 
 ## Screenshots
-
-![App Screenshot](https://github.com/user-attachments/assets/433ea508-295a-41dc-a2b8-13e6f91d712a)
-
-![App Screenshot](https://github.com/user-attachments/assets/91a536cd-37e8-48d0-a9d8-497635c45404)
 
 ![App Screenshot](https://github.com/user-attachments/assets/8f624638-e2db-491e-ac61-7f1631f44a87)
 
 ![App Screenshot](https://github.com/user-attachments/assets/d0e2970d-2cd5-4cba-aab3-fa1aec0799f6)
 
-![App Screenshot](https://github.com/user-attachments/assets/7657cc41-6a53-46e8-acef-c2ce75469df8)
 
-![App Screenshot](https://github.com/user-attachments/assets/58bad947-48f0-4516-8594-e99798a55150)
 
-![App Screenshot](https://github.com/user-attachments/assets/4378b7f5-694e-4b90-9d3c-8e7bbe7624b7)
-
-![App Screenshot](https://github.com/user-attachments/assets/642b71d2-47ea-49f2-b924-2f13e08346ae)
-
-![App Screenshot](https://github.com/user-attachments/assets/28409261-c4a7-4cd9-8e3d-a829e50ea2d8)

@@ -26,3 +26,10 @@
   background-color: #e2fd00;
   color: black;
 }
+
+@media (max-width: 767px) {
+  .cart-container {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+}

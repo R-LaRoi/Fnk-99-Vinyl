@@ -30,9 +30,28 @@ This application offers a comprehensive online vinyl shopping experience, featur
 - **MongoDB**: NoSQL database for storing data.
 - **RESTful API**: Architecture for data exchange.
 
-## Screenshots
+### Key Components
 
-![App Screenshot](https://github.com/user-attachments/assets/433ea508-295a-41dc-a2b8-13e6f91d712a)
+- `App.js`: Main component handling routing and data fetching.
+- `Nav.js`: Navigation component.
+- `Cart.js`: Shopping cart functionality.
+- `Shop.js`: Displays product catalog.
+- `ArtistProfiles.js`: Shows artist information.
+- `Checkout.js`: Handles the checkout process.
+
+## API Integration
+
+The application interacts with two main API endpoints:
+1. `https://fnk-99-vinyl-server.onrender.com/api` for product data.
+2. `https://fnk-99-vinyl-server.onrender.com/api/artist-profiles` for artist profile data.
+
+Data is fetched using Axios and managed using React's useState and useEffect hooks.
+
+## Routing
+
+React Router is used for navigation, with protected routes for authenticated users.
+
+## Screenshots
 
 ![App Screenshot](https://github.com/user-attachments/assets/91a536cd-37e8-48d0-a9d8-497635c45404)
 

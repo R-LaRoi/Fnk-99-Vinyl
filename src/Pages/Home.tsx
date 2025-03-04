@@ -1,9 +1,8 @@
-
 import { Footer } from "../Components/Footer";
-import { Products } from "../Components/Products"
-import { Hero } from '../Components/Hero'
-import "../Styles/hero.css"
-// import { ArtistProfiles } from "./ArtistProfiles";
+import { Products } from "../Components/Products";
+import { Hero } from '../Components/Hero';
+import "../Styles/hero.css";
+import { useScrollReveal } from '../Components/ScrollAnimation'; // Import the hook
 
 interface Product {
   id: string;
@@ -22,27 +21,30 @@ interface HomeProps {
   products: Product[];
 }
 
-const heroVideo = "https://github.com/user-attachments/assets/e82835d1-ba82-4180-b34e-a51755367df0"
+const heroVideo = "https://github.com/user-attachments/assets/e82835d1-ba82-4180-b34e-a51755367df0";
 
 export function Home({ products }: HomeProps) {
   console.log(products);
+
+  useScrollReveal(); // Apply the default animation to .reveal elements
+
   return (
     <>
       <Hero video={heroVideo} title="FNK 99 RECORDS" />
 
-      <div className="text-center mb-10">
+      <div className="text-center mb-10 reveal">
         <h1 className="text-9xl mt-10 text-center text-[#292929]">THIS JUST IN</h1>
         <h3 className="text-4xl text-center text-[#292929] ">Check out our latest collection</h3>
       </div>
 
-      <div className="products-container">
+      <div className="products-container reveal">
         {products.length > 0 && (
           products.slice(0, 4).map(product => (
             <Products key={product.id} products={product} />
           ))
         )}
       </div>
-      <div className="mt-20 container mx-auto px-4">
+      <div className="mt-20 container mx-auto px-4 reveal">
         <section className="ap-container max-w-4xl mx-auto">
           <div className="text-center">
             <h1 className="ap-title text-6xl md:text-8xl text-center text-[#292929] mb-4">ARTIST PROFILE</h1>
@@ -58,21 +60,21 @@ export function Home({ products }: HomeProps) {
               <img
                 src="https://github.com/user-attachments/assets/98f3d686-b656-4556-8c6c-392a1a4f46b8"
                 alt="Shakes & Les"
-                className="image-profile rounded-md w-full"
+                className="image-profile rounded-md w-full reveal"
               />
             </div>
-            <div className="text-center text-[#292929]  max-w-2xl">
+            <div className="text-center text-[#292929]  max-w-2xl reveal">
 
               <h3 className="text-xl md:text-2xl mb-4">Shakes & Les</h3>
               <div className="flex flex-col sm:flex-row items-center justify-center h-auto  space-y-4 sm:space-y-0 py-16  ">
 
-                <div className="text-xl lg:text-xl text-justify w-75 sm:w-[40ch] px-4 text-zinc-700">
+                <div className="text-xl lg:text-xl text-justify w-75 sm:w-[40ch] px-4 text-zinc-700 reveal">
                   <div>
                     <b>Funk 99</b> is more than just a song; it's a celebration of culture, rhythm, and community. With its catchy intro and engaging lyrics, Shakes & Les, along with LeeMcKrazy, have crafted a track that not only entertains but also invites listeners to join in the fun. As the Amapiano genre continues to evolve,"Funk 99 stands out as a testament to the creativity and vibrancy of South African music.
                   </div>
 
                 </div>
-                <div className="text-xl lg:text-xl text-justify w-75 sm:w-[40ch] px-4 text-zinc-700">
+                <div className="text-xl lg:text-xl text-justify w-75 sm:w-[40ch] px-4 text-zinc-700 reveal">
                   In 2024, Amapiano continued its remarkable global ascent, marking a decade since its emergence as a vibrant South African music genre. The genre's infectious beats and cultural influence have transcended borders, with significant traction in countries like Nigeria, the USA, UK, Germany, and France
                 </div>
 
@@ -85,15 +87,7 @@ export function Home({ products }: HomeProps) {
         </section>
       </div>
 
-
       <Footer />
-
     </>
-  )
+  );
 }
-
-
-
-
-
-

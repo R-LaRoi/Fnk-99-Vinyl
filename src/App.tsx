@@ -88,6 +88,10 @@ function App() {
 
 
 
+
+
+
+
   return (
     <>
       {loading === false ? (
@@ -97,14 +101,14 @@ function App() {
             <Nav menu={navMenu} />
 
             <Routes>
-              <Route path="/" element={<Home products={products} />} />
-              <Route path="/cart" element={<Cart />} />
-              <Route path="/shop" element={<Shop products={products} />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/artists" element={<ArtistProfiles profiles={profiles} products={products} />} />
-              <Route path="/order-confirmation" element={<OrderConfirmation />} />``
+              <Route path="/" element={<div ><Home products={products} /></div>} />
+              <Route path="/cart" element={<div ><Cart /></div>} />
+              <Route path="/shop" element={<div ><Shop products={products} /></div>} />
+              <Route path="/about" element={<div ><About /></div>} />
+              <Route path="/artists" element={<div ><ArtistProfiles profiles={profiles} products={products} /></div>} />
+              <Route path="/order-confirmation" element={<div ><OrderConfirmation /></div>} />
               {isAuthenticated ? (
-                <Route path="/checkout" element={<Checkout />} />
+                <Route path="/checkout" element={<div ><Checkout /></div>} />
               ) : (
                 <Route path="/shop" element={<Navigate to="/shop" />} />
               )}

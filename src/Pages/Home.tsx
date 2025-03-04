@@ -31,8 +31,8 @@ export function Home({ products }: HomeProps) {
       <Hero video={heroVideo} title="FNK 99 RECORDS" />
 
       <div className="text-center mb-10">
-        <h1 className="text-9xl mt-10 text-center text-gray-900">THIS JUST IN</h1>
-        <h3 className="text-4xl text-center text-gray-900 ">Check out our latest collection</h3>
+        <h1 className="text-9xl mt-10 text-center text-[#292929]">THIS JUST IN</h1>
+        <h3 className="text-4xl text-center text-[#292929] ">Check out our latest collection</h3>
       </div>
 
       <div className="products-container">

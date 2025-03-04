@@ -31,5 +31,7 @@
   .cart-container {
     grid-template-columns: 1fr;
     height: auto;
+    display: flex;
+    flex-direction: column-reverse;
   }
 }

@@ -1,7 +1,7 @@
 import "../Styles/nav.css";
 import { useState } from 'react';
-import { UserLoginBtn } from "./UserLoginBtn";
-import { UserLogoutBtn } from "./UserLogoutBtn";
+// import { UserLoginBtn } from "./UserLoginBtn";
+// import { UserLogoutBtn } from "./UserLogoutBtn";
 import { Link } from "react-router-dom";
 import logo from "../dist/assets/logo.png";
 
@@ -24,7 +24,7 @@ export function Nav({ menu }: NavProps) {
       <div className="flex items-center justify-between text-[#292929] tracking-wide">
         <div className="flex items-center space-x-4">
           <div>
-            <img src={logo} alt="logo" className="logo h-14 w-auto" />
+            <img src={logo} alt="logo" className="logo h-10 w-auto" />
           </div>
 
           <button className="md:hidden" onClick={toggleMenu}>
@@ -64,8 +64,8 @@ export function Nav({ menu }: NavProps) {
         </ul>
 
         <div className="flex items-center space-x-4">
-          <UserLoginBtn text="Login" />
-          <UserLogoutBtn />
+          {/* <UserLoginBtn text="Login" />
+          <UserLogoutBtn /> */}
           <Link to="/cart">
             <button className="text-gray-700 hover:bg-pink-700 hover:text-white font-bold py-2 px-4 rounded-xl">
               <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">

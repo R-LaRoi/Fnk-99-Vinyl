@@ -10,8 +10,7 @@ body {
 .nav-- {
   background-color: #e2fd00;
   width: 100%;
-  z-index: 100;
-  /* margin-top: -50px; */
+  z-index: 100; /* Or higher if needed */
   position: fixed;
   padding: 0.8rem;
 }

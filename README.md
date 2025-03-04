@@ -53,6 +53,9 @@ React Router is used for navigation, with protected routes for authenticated use
 
 ## Screenshots
 
-![App Screenshot](https://github.com/user-attachments/assets/91a536cd-37e8-48d0-a9d8-497635c45404)
+![App Screenshot](https://github.com/user-attachments/assets/8f624638-e2db-491e-ac61-7f1631f44a87)
+
+![App Screenshot](https://github.com/user-attachments/assets/d0e2970d-2cd5-4cba-aab3-fa1aec0799f6)
+
 
 

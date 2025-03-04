@@ -13,14 +13,14 @@ interface ViewItemBtnProps {
 
 export function Modal({ item, onClose }: { item: ViewItemBtnProps, onClose: () => void }) {
   return ReactDOM.createPortal(
-    <div className="modal-- fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-99 p-4">
+    <div className="modal-- fixed inset-x-0 top-[4rem] bottom-0 flex items-center justify-center bg-black bg-opacity-50 z-99 p-4 overflow-y-auto">
       <div className="bg-white rounded-lg w-full max-w-5xl overflow-hidden">
         <div className="flex flex-col md:flex-row">
           <div className="md:w-1/2 p-4 md:p-8">
             <img
               src={item.img_url}
               alt={item.title}
-              className="w-full h-auto md:h-full object-contain md:object-cover"
+              className="w-full h-auto object-contain md:h-full object-cover"
             />
           </div>
           <div className="modal-text p-4 md:p-10 md:w-1/2 flex flex-col justify-between">

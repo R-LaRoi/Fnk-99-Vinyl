@@ -13,7 +13,6 @@ type HeroProps = {
 
 
 
-
 export function Hero({ video, title }: HeroProps) {
 
   useScrollReveal()

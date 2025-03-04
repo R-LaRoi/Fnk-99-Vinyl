@@ -53,7 +53,7 @@ export function Loading({ title }: LoadingProps) {
 
   return (
     <>
-      <section className="fixed inset-0 flex items-center justify-center z-50 ">
+      <section className="fixed inset-0 flex items-center justify-center z-50 bg-[]">
         <div ref={titleRef} className="title text-9xl font-bold">{title}</div>
       </section>
       <section className="load-body" ref={main}>

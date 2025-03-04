@@ -62,7 +62,7 @@ h1 {
   transform: translate(-50%, -50%);
   text-align: center;
   color: #ffffffec;
-  font-size: 15vw;
+  font-size: 10vw;
   letter-spacing: 5px;
   white-space: nowrap;
   padding: 2rem;
@@ -74,13 +74,12 @@ h1 {
   font-family: "Visby";
   font-size: 1.5vw;
   margin-top: -2rem;
-  /* letter-spacing: -0.5px; */
 }
 
 @media (max-width: 968px) {
   .overlay {
     margin-top: 10%;
-    font-size: 18vw;
+    font-size: 8vw;
     letter-spacing: 0px;
     line-height: 1;
   }
@@ -122,7 +121,7 @@ h1 {
 @media (max-width: 568px) {
   .overlay {
     margin-top: 10%;
-    font-size: 10vw;
+    font-size: 8vw;
     letter-spacing: 0px;
     line-height: 1;
   }

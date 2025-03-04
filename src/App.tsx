@@ -9,7 +9,7 @@ import { Shop } from './Pages/Shop'
 import { About } from './Pages/About'
 import { ArtistProfiles } from './Pages/ArtistProfiles'
 import { Home } from './Pages/Home'
-// import LoadVideo from './Components/LoadingTwo'
+import LoadVideo from './Components/LoadingTwo'
 import { Checkout } from './Pages/Checkout'
 import './App.css'
 import { OrderConfirmation } from './Pages/OrderConfirmation';
@@ -27,12 +27,12 @@ function App() {
   const [profiles, setProfiles] = useState([]);
   console.log(products);
   console.log(profiles)
-  // const [loading, setLoading] = useState(true)
+  const [loading, setLoading] = useState(true)
   const { isAuthenticated } = useAuth0();
 
-  // useEffect(() => {
-  //   setTimeout(() => setLoading(false), 5000)
-  // }, [])
+  useEffect(() => {
+    setTimeout(() => setLoading(false), 5000)
+  }, [])
 
   useEffect(() => {
 
@@ -90,30 +90,30 @@ function App() {
 
   return (
     <>
-      {/* {loading === false ? ( */}
+      {loading === false ? (
 
-      <>
-        <section className='app-main'>
-          <Nav menu={navMenu} />
+        <>
+          <section className='app-main'>
+            <Nav menu={navMenu} />
 
-          <Routes>
-            <Route path="/" element={<Home products={products} />} />
-            <Route path="/cart" element={<Cart />} />
-            <Route path="/shop" element={<Shop products={products} />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/artists" element={<ArtistProfiles profiles={profiles} products={products} />} />
-            <Route path="/order-confirmation" element={<OrderConfirmation />} />``
-            {isAuthenticated ? (
-              <Route path="/checkout" element={<Checkout />} />
-            ) : (
-              <Route path="/shop" element={<Navigate to="/shop" />} />
-            )}
-          </Routes>
-        </section>
-      </>
+            <Routes>
+              <Route path="/" element={<Home products={products} />} />
+              <Route path="/cart" element={<Cart />} />
+              <Route path="/shop" element={<Shop products={products} />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/artists" element={<ArtistProfiles profiles={profiles} products={products} />} />
+              <Route path="/order-confirmation" element={<OrderConfirmation />} />``
+              {isAuthenticated ? (
+                <Route path="/checkout" element={<Checkout />} />
+              ) : (
+                <Route path="/shop" element={<Navigate to="/shop" />} />
+              )}
+            </Routes>
+          </section>
+        </>
 
-      {/* ) : (
-        <LoadVideo />)} */}
+      ) : (
+        <LoadVideo />)}
 
     </>
 

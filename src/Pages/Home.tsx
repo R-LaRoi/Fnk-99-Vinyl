@@ -2,7 +2,7 @@ import { Footer } from "../Components/Footer";
 import { Products } from "../Components/Products";
 import { Hero } from '../Components/Hero';
 import "../Styles/hero.css";
-import { useScrollReveal } from '../Components/ScrollAnimation'; // Import the hook
+import { useScrollReveal } from '../Components/ScrollAnimation';
 
 interface Product {
   id: string;
@@ -26,7 +26,7 @@ const heroVideo = "https://github.com/user-attachments/assets/e82835d1-ba82-4180
 export function Home({ products }: HomeProps) {
   console.log(products);
 
-  useScrollReveal(); // Apply the default animation to .reveal elements
+  useScrollReveal();
 
   return (
     <>
